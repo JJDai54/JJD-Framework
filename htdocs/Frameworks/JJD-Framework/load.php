@@ -40,6 +40,7 @@ namespace JJD;
 
 
 define('JJD_FW', basename(dirname(__FILE__)));
+echo "<hr>" . JJD_FW . "<hr>";exit;
 define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . JJD_FW);
 
 global $xoopsConfig;

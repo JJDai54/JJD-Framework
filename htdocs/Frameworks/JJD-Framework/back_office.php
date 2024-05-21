@@ -35,13 +35,15 @@
 // +-----------------------------------------------------------------------+
 //
 // $Id: .php,v 1.2 2004/09/18 19:25:55 dawilby Exp $
+define('JJD_FW_FOLDER', basename(dirname(__FILE__)));
 
-define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . basename(dirname(__FILE__)));
+//echo "<hr>" . JJD_FW_FOLDER . "<hr>";
+define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . JJD_FW_FOLDER);
 define('JJD_PATH_XFORMS', JJD_PATH . '/class/xoopsform');
 define('JJD_PATH_CSS', JJD_PATH . '/css');
 //echo"<hr>JJD_PATH => " . JJD_PATH . "<br>JJD_PATH_XFORMS => " . JJD_PATH_XFORMS . "<hr>";
 
-define('JJD_URL', XOOPS_URL . '/Frameworks' . dirname(__FILE__));
+define('JJD_URL', XOOPS_URL . '/Frameworks/' . JJD_FW_FOLDER);
 define('JJD_ICO16', JJD_URL . "/images/icons/16");
 define('JJD_ICO32', JJD_URL . "/images/icons/32");
 

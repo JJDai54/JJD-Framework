@@ -1216,15 +1216,17 @@ _JJD-Framework
 6=class\xoopsform\loadimages\formfilesimages.php
 7=include\constantes.php
 8=include\date-functions.php
+9=include\xform-functions.php
+10=back_office.php
 [Selected Project Files]
 Main=
-Selected=include\constantes.php
+Selected=back_office.php
 [include\globales-functions.php]
-TopLine=41
+TopLine=53
 Caret=1,95
 [load.php]
-TopLine=19
-Caret=15,42
+TopLine=34
+Caret=1,43
 [include\language-functions.php]
 TopLine=54
 Caret=17,81
@@ -1242,7 +1244,13 @@ TopLine=89
 Caret=1,1
 [include\constantes.php]
 TopLine=1
-Caret=1,23
+Caret=57,19
 [include\date-functions.php]
 TopLine=11
 Caret=91,24
+[include\xform-functions.php]
+TopLine=87
+Caret=10,101
+[back_office.php]
+TopLine=25
+Caret=22,38

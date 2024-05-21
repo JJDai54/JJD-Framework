@@ -17,9 +17,8 @@ define('JJD_PATH_CSS', JJD_PATH . '/css');
 
 
 //define('JJD_URL', XOOPS_URL . '/Frameworks/' .  JJD_FW);
-define('JJD_URL', XOOPS_URL . '/Frameworks/' .  'JJD-Framework');
+define('JJD_URL', XOOPS_URL . '/Frameworks/' .  JJD_FW_FOLDER);
 
-define('JJD_URL', XOOPS_URL . '/Frameworks/' .  'JJD_FW');
 
 define('JJD_XFORM_URL', JJD_URL . '/class/xoopsform');
 define('JJD_ICO16', JJD_URL . "/images/icons/16");
