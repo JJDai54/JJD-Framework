@@ -21,20 +21,15 @@ function getSqlDate($dateVar = null, $formatSql = 'Y-m-d H:i:s', $formatFrom = '
 		$dateVar = strtotime($dateVar['date']) + (int)$dateVar['time'];
         $ret =  date($formatSql, $dateVar);
     }else{
-		//$newDateVar = strtotime($dateVar['date']);
-        //$newDateVar = \DateTime::createFromFormat('!d-m-Y',  $dateVar);
-//         $newDateVar = date_parse_from_format('!d-m-Y',  $dateVar);
-//         //$ret =  date_format($date, $formatSql);
-//         $ret =  date($formatSql, $newDateVar->timestamp());
-//         echo "<hr>getSqlDate : {$dateVar}<br>{$newDateVar}<br>{$ret}<hr>";
-    //$language = $GLOBALS['xoopsConfig']['language'];
+        //harmonisation des separateur, la fonction date_create_from_format y est sensible
+        $dateVar = str_replace ('/','-',$dateVar);
+        $formatFrom = str_replace ('/','-',$formatFrom);
 
-		//$dateVar = strtotime($dateVar['date']) + (int)$dateVar['time'];
+        //echo $formatFrom . "<br>" .  $dateVar . "<br>" . strlen($dateVar) . "<hr>";
         $newDate = date_create_from_format($formatFrom, $dateVar);
+//if ($newDate === false) exit ("===>probleme conversion" . "<hr>");
+
         $ret = date_format($newDate, $formatSql);
-        //echo "<hr>getSqlDate : {$dateVar}<br>{$ret}<hr>";
-        
-        //exit;
     }
     return $ret;
   }

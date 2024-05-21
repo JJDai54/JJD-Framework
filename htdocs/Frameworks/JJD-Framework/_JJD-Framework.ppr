@@ -18,8 +18,8 @@ Extensions=*.*
 [Project tree]
 _JJD-Framework
 	+JJD-Framework
-		+class
-			-xoopsform
+		-class
+			+xoopsform
 				-admintable
 					-doc
 						-images
@@ -1189,7 +1189,7 @@ _JJD-Framework
 				js\trierTableauHTML\trierTableau.js
 			js\config_highslide.js
 			js\index.html
-		+language
+		-language
 			+english
 				language\english\admin.php
 				language\english\common.php
@@ -1207,24 +1207,24 @@ _JJD-Framework
 		JJD-Framework.ppr
 		load.php
 [Open project files]
-0=Nouveau1.txt
-1=include\globales-functions.php
-2=load.php
-3=include\language-functions.php
-4=language\french\admin.php
-5=language\english\admin.php
+0=include\globales-functions.php
+1=load.php
+2=include\language-functions.php
+3=language\french\admin.php
+4=language\english\admin.php
+5=class\xoopsform\loadimages\formloadimages.php
+6=class\xoopsform\loadimages\formfilesimages.php
+7=include\constantes.php
+8=include\date-functions.php
 [Selected Project Files]
 Main=
-Selected=language\english\admin.php
-[Nouveau1.txt]
-TopLine=1
-Caret=1,1
+Selected=include\date-functions.php
 [include\globales-functions.php]
-TopLine=53
+TopLine=41
 Caret=1,95
 [load.php]
-TopLine=46
-Caret=54,57
+TopLine=19
+Caret=15,42
 [include\language-functions.php]
 TopLine=54
 Caret=17,81
@@ -1234,3 +1234,15 @@ Caret=1,18
 [language\english\admin.php]
 TopLine=1
 Caret=1,17
+[class\xoopsform\loadimages\formloadimages.php]
+TopLine=5
+Caret=26,26
+[class\xoopsform\loadimages\formfilesimages.php]
+TopLine=89
+Caret=1,1
+[include\constantes.php]
+TopLine=1
+Caret=3,18
+[include\date-functions.php]
+TopLine=11
+Caret=91,24
