@@ -1218,7 +1218,7 @@ _JJD-Framework
 8=include\date-functions.php
 [Selected Project Files]
 Main=
-Selected=include\date-functions.php
+Selected=include\constantes.php
 [include\globales-functions.php]
 TopLine=41
 Caret=1,95
@@ -1242,7 +1242,7 @@ TopLine=89
 Caret=1,1
 [include\constantes.php]
 TopLine=1
-Caret=3,18
+Caret=1,23
 [include\date-functions.php]
 TopLine=11
 Caret=91,24
