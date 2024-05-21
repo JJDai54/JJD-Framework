@@ -22,10 +22,10 @@ var tth_options = {
  'margin' : "0px 4px 0px 4px",  
  'localLang' : "fr",
  'posImg' : "right", //position de l'icone, right or left
- 'asc' : true, //defini le sens de tri des colonnes par défaut
- 'last_asc' : false, // change 'asc' à chaque changement de sens dans une même colonne
- 'typeContent' : 0 ,//utilisé pendant le dev
- 'isFirstTH' : true //utilisé pour déterminer si on est sur la premigne TH
+ 'asc' : true, //defini le sens de tri des colonnes par dÃ©faut
+ 'last_asc' : false, // change 'asc' Ã  chaque changement de sens dans une mÃªme colonne
+ 'typeContent' : 0 ,//utilisÃ© pendant le dev
+ 'isFirstTH' : true //utilisÃ© pour dÃ©terminer si on est sur la premigne TH
 };
  
 var ico_blank    = tth_options['arrows'].indexOf('blank.png');
@@ -159,7 +159,7 @@ function tth_trierTableau(idTbl, defautCol2sort = 0, cols2sort = "", sRoot = "")
   //parcours des colonnes et affectation de l'evennement click
   thx.forEach(function(th){
 
-  //remplace le sépaateur par |
+  //remplace le sÃ©paateur par |
   cols2sort = cols2sort.replace(/\-/gi,"|").replace(/\,/gi,"|").replace(/\;/gi,"|").replace(/\//gi,"|");
   var tCols2sort = cols2sort.split('|');
 
@@ -167,7 +167,7 @@ function tth_trierTableau(idTbl, defautCol2sort = 0, cols2sort = "", sRoot = "")
 //alert(tCols2sort[0] + "|" + tth_options['old_th']);
   tth_options['old_th'] = Array.from(thx).indexOf(th) + 1;
   th.style.cursor = 'pointer';  //affichge d'un curseur sur le titre des colonnes
-  if (defautCol2sort == tth_options['old_th']) th2sort = th; // met de côté la colonne de tri par défaut
+  if (defautCol2sort == tth_options['old_th']) th2sort = th; // met de cÃ´tÃ© la colonne de tri par dÃ©faut
   //initialise les colonnes de tri et leur affecte l'evennement "click()"
   if (tCols2sort.find(element => element == tth_options['old_th'] )  !== undefined || allCols)   
   {
@@ -175,12 +175,12 @@ function tth_trierTableau(idTbl, defautCol2sort = 0, cols2sort = "", sRoot = "")
       th.appendChild( tth_getNewImg2Sort(ico_blank)); //icone transparent avant pour laisser un espace
       //this.asc = tth_options['asc'];
       //===========================================================    
-      //evennement ajouté à chaque colonne de tri
+      //evennement ajoutÃ© Ã  chaque colonne de tri
       //===========================================================    
       th.addEventListener('click', function(){
       newIndexOfTH = Array.from(thx).indexOf(th)+1;
 
-      //détermine l'image up_off ou down_off aux colonnes de tri uniquement  
+      //dÃ©termine l'image up_off ou down_off aux colonnes de tri uniquement  
       
       if(tth_options['last_asc'] && !tth_options['isFirstTH']){ //cas a revoir
         if(newIndexOfTH == tth_options['old_th']){
@@ -200,7 +200,7 @@ function tth_trierTableau(idTbl, defautCol2sort = 0, cols2sort = "", sRoot = "")
         //alert("isFirstTH");
       }  
       
-      //affecte l'icone gris à tutes les colonnes y compris celle cliquée
+      //affecte l'icone gris Ã  tutes les colonnes y compris celle cliquÃ©e
       thx.forEach(function(th){
         if(th.getElementsByTagName("img").length > 0){
           oImg = th.getElementsByTagName("img")[0];         
@@ -208,19 +208,19 @@ function tth_trierTableau(idTbl, defautCol2sort = 0, cols2sort = "", sRoot = "")
         }
       })
       //-----------------------------------------
-      //trTries stocke les références des lignes triées  
+      //trTries stocke les rÃ©fÃ©rences des lignes triÃ©es  
       let trTries = Array.from(trxb).sort(tth_compare(Array.from(thx).indexOf(th), this.asc));
       img = (this.asc) ? tth_options['arrows'][ico_down_on] : tth_options['arrows'][ico_up_on] ;         
       oImg = th.getElementsByTagName("img")[0];         
       oImg.src = tth_options['imgSkin'] + img;
       
-      //déplace les lignes du tableau dans l'ordre de tri  
+      //dÃ©place les lignes du tableau dans l'ordre de tri  
       trTries.forEach(function(tr){
          tbody.appendChild(tr)
       });
       
       //-------------------------------------------------
-      // colonne mise de coté pour vérifier au prochain clique si on est toujours sur la m^me colonne  
+      // colonne mise de cotÃ© pour vÃ©rifier au prochain clique si on est toujours sur la m^me colonne  
       tth_options['old_th'] = newIndexOfTH;
 
     })

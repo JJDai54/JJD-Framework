@@ -11,7 +11,7 @@ namespace JJD;
 */
 
 /**************************************************************
- *découpe le fichier par definition et analyse chaque definition
+ *dÃ©coupe le fichier par definition et analyse chaque definition
  **************************************************************/ 
 
 function language2Array($file){
@@ -37,8 +37,8 @@ function language2Array($file){
 }
 
 /***************************************************************************
-Charge un fichiers de langues dans un tableau indexé
-il faut parser ensuite la définition
+Charge un fichiers de langues dans un tableau indexÃ©
+il faut parser ensuite la dÃ©finition
 ****************************************************************************/
 function languageFWJJD2Array($fileShortName){
 global $xoopsConfig;

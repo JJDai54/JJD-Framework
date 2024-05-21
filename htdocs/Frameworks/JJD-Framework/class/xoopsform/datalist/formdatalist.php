@@ -329,7 +329,7 @@ class XoopsFormDataListGroup extends XoopsFormElement
   var $_dataListOk = '';
   var $_maxValues = 0;
   var $cat = '';
-  //const DATALIST_NONE = '__NONE__';
+  //constÂ DATALIST_NONEÂ =Â '__NONE__';
  
     function __construct($name, $options = null, $groupName = '__NONE__')
     {  

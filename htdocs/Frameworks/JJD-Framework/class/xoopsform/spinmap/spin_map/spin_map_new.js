@@ -3,7 +3,7 @@
 
 /********************************************************
  * Renvoi l'instance de la classe spin correspondant au composant
- * qui a déclenche l'evennement
+ * qui a dÃ©clenche l'evennement
  * le balise concernee contienne :
  * - l'attrivut 'clname' dont la valeur correspon au nom de la classe
  * - l'attribut "index" qui contient le numero de lazone  du map survolee
@@ -43,13 +43,13 @@ function spin_map_getSpin(id){
 
 
 ///////////////////////////////////////////////////////
-//      Classe "spin" affectéee a chaque composant   //
+//      Classe "spin" affectÃ©ee a chaque composant   //
 ///////////////////////////////////////////////////////
 
 
 /********************************************************
  * constructeur
- * jsap : tableau json qui contient toutes les varaibles nécéssaire a la classe
+ * jsap : tableau json qui contient toutes les varaibles nÃ©cÃ©ssaire a la classe
  *        value, smallIncrement, largeIncrement, ....  
  * ini : tableau json qui contient le contnu du fichier ini du skin
  *        taille des image et definition des 'area' du 'map'  
@@ -118,7 +118,7 @@ var clsSpin = function (jsap,ini)
 
    
 /****************************************************************************
- * modifie les coordonnées de l'image a affichée selon l'offset vertical
+ * modifie les coordonnÃ©es de l'image a affichÃ©e selon l'offset vertical
  * sur l'evennement onmousover 
  ***************************************************************************/
 	 clsSpin.prototype.createEl = function (el) {
@@ -216,7 +216,7 @@ var clsSpin = function (jsap,ini)
 
 /****************************************************************************
  * Fonction d'affichage de valeur pour debugage
- * ca evite d'uttiliser la fonction "alert" qui est parfois génante
+ * ca evite d'uttiliser la fonction "alert" qui est parfois gÃ©nante
  * surtout sur l'evennement mouseover par exemple  
  ***************************************************************************/
 	 clsSpin.prototype.debug = function (message) {
@@ -228,8 +228,8 @@ var clsSpin = function (jsap,ini)
 
 
 /****************************************************************************
- * fonction appelée sur l'evennement "onmousedown"
- * seleon l'offsetV, la valeur est incrémentéen décrémenté ou bornée. 
+ * fonction appelÃ©e sur l'evennement "onmousedown"
+ * seleon l'offsetV, la valeur est incrÃ©mentÃ©en dÃ©crÃ©mentÃ© ou bornÃ©e. 
  ***************************************************************************/
 	 clsSpin.prototype.start = function (offsetH, offsetV) {
 //     alert('start' + "-" + offsetH + "-" + offsetV);
@@ -237,14 +237,14 @@ var clsSpin = function (jsap,ini)
     this.debug(typeof offsetV);
     
      switch(offsetV){
-      case 1: // incremantation de la valeur, on ne chage pas les incrément 
+      case 1: // incremantation de la valeur, on ne chage pas les incrÃ©ment 
         this.sens = 1;
         break;
       case 2:  // affectationde la valeur maximum et sortie
         this.setValue(this.jsap.max);   
         return; 
         break;
-      case 3:  // décrémentation de la valeur  on change de signe les incréments    
+      case 3:  // dÃ©crÃ©mentation de la valeur  on change de signe les incrÃ©ments    
         this.sens = -1;
         break;
       case 4: //affectation de la valeur minimum et sortie
@@ -268,7 +268,7 @@ var clsSpin = function (jsap,ini)
   
     this.doIncrement( );
     
-    //on continue au cas ou la souris reste enfoncée
+    //on continue au cas ou la souris reste enfoncÃ©e
     cmd = this.clName + '.timer()';
     this.idTimer = setInterval (cmd, this.delai);    
 }
@@ -290,7 +290,7 @@ var clsSpin = function (jsap,ini)
 }       
 
 /****************************************************************************
- * modifie les coordonnées de l'image a affichée selon l'offset horizontal et vertical
+ * modifie les coordonnÃ©es de l'image a affichÃ©e selon l'offset horizontal et vertical
  ***************************************************************************/
 	 clsSpin.prototype.move = function (offsetH, offsetV) {         
    //modifieTexte();
@@ -310,7 +310,7 @@ var clsSpin = function (jsap,ini)
 
 
 /****************************************************************************
- * appelé sur l'evennement onmouseup
+ * appelÃ© sur l'evennement onmouseup
  ***************************************************************************/
 	 clsSpin.prototype.stop = function (offsetH, offsetV) {
 
@@ -320,7 +320,7 @@ var clsSpin = function (jsap,ini)
 }
 
 /****************************************************************************
- * fonction rapeller à interval réguler dans la cas ou la souris reste enfoncée
+ * fonction rapeller Ã  interval rÃ©guler dans la cas ou la souris reste enfoncÃ©e
  ***************************************************************************/
 	 clsSpin.prototype.timer = function () {
     this.doIncrement ();
@@ -419,7 +419,7 @@ var clsSpin = function (jsap,ini)
 
 
   /****************************************************************************
-   * calcul de la valeur a afficher dans la zone de texte en tenant compte du nombre de décimale
+   * calcul de la valeur a afficher dans la zone de texte en tenant compte du nombre de dÃ©cimale
    ***************************************************************************/
 	clsSpin.prototype.formatNumber = function () {
 	   value = this.value; 

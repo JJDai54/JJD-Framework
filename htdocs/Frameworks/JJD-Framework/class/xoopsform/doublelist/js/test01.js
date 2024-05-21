@@ -11,8 +11,8 @@
 //init_objets("colonne_stock", "colonne_afficher");
 
 
-// on déclare les valeurs possible
-// SYNTAX    identifiant : libélé
+// on dÃ©clare les valeurs possible
+// SYNTAX    identifiant : libÃ©lÃ©
 /*
 var colonne_texts = {	'photo':'Photos',
 						'marque' : 'Marque',
@@ -20,8 +20,8 @@ var colonne_texts = {	'photo':'Photos',
 						'genre' : 'Genre',
 						'boite':'Boite',
 						'energie':'Energie',
-						'proprietaire' : 'Propri‚taire',
-						'reservation':'R‚servations',
+						'proprietaire' : 'Propriâ€štaire',
+						'reservation':'Râ€šservations',
 						'commentaire':'Commentaires'
 					};
 // initialisation de la selection  PAR DeFAUT
@@ -35,8 +35,8 @@ var colonne_texts = {	'16' : 'Photos',
           						'5'  : 'Genre',
           						'4'  : 'Boite',
           						'3'  : 'Energie',
-          						'12' : 'Propri‚taire',
-          						'10' : 'R‚servations',
+          						'12' : 'Propriâ€štaire',
+          						'10' : 'Râ€šservations',
           						'6'  : 'Commentaires'
           					};
 

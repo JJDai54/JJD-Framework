@@ -34,7 +34,7 @@ function displayArray($t, $title = "", $bExit = false){
 
 
 /***************************************************************************
-Renvoie la valeur d'un bit précisé par un index dans la valeur binaire
+Renvoie la valeur d'un bit prÃ©cisÃ© par un index dans la valeur binaire
 ****************************************************************************/
 function isBitOk($bitIndex, $binValue){
   $b = pow(2, $bitIndex);

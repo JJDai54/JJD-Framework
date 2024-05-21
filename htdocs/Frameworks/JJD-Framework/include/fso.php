@@ -298,7 +298,7 @@ function setChmodRecursif($chemin, $m = 0777){
     // Affichage des infos sur le fichier $chemin
     //echo "$chemin   type: $filetype size: $lstat[size]  mtime: $mtime\n";
     chmod($chemin, $m); 
-    // Si $chemin est un dossier => on appelle la fonction explorer() pour chaque ÈlÈment (fichier ou dossier) du dossier$chemin
+    // Si $chemin est un dossier => on appelle la fonction explorer() pour chaque √©l√©ment (fichier ou dossier) du dossier$chemin
     if( is_dir($chemin) ){
         $me = opendir($chemin);
         while( $child = readdir($me) ){
@@ -317,7 +317,7 @@ function explorer($chemin){
     // Affichage des infos sur le fichier $chemin
     echo "$chemin   type: $filetype size: $lstat[size]  mtime: $mtime\n";
      
-    // Si $chemin est un dossier => on appelle la fonction explorer() pour chaque ÈlÈment (fichier ou dossier) du dossier$chemin
+    // Si $chemin est un dossier => on appelle la fonction explorer() pour chaque √©l√©ment (fichier ou dossier) du dossier$chemin
     if( is_dir($chemin) ){
         $me = opendir($chemin);
         while( $child = readdir($me) ){

@@ -1,7 +1,7 @@
 14-07-2011 - JJD - fr
 =====================
-Création de la classe XoopsFormCheckBoxAll qui hérite de XoopsFormCheckBox.
-Elle permet d'ajoute une case à cocher "tout" qui permet de cocher ou décocher toutes les cases du groupe.
+CrÃ©ation de la classe XoopsFormCheckBoxAll qui hÃ©rite de XoopsFormCheckBox.
+Elle permet d'ajoute une case Ã  cocher "tout" qui permet de cocher ou dÃ©cocher toutes les cases du groupe.
 
 Installation:
 -------------
@@ -13,12 +13,12 @@ Utilisation:
  - l'initiliser comme pour la classe XoopsFormCheckBox 
  - appeler la fonction ->addOptionCheckAll($caption, $pos, $checked);
 	parametres : 
-          $caption : Libellé à afficher (exe : "tout")
-          $pos : position de l'option: -1 = affiché en premier 
+          $caption : LibellÃ© Ã  afficher (exe : "tout")
+          $pos : position de l'option: -1 = affichÃ© en premier 
                                         0 = Pas d'affichage de l'options
-                                        1 = affiché en dernier (option par defaut)
+                                        1 = affichÃ© en dernier (option par defaut)
 
-         $checked : spécifie si la 'option 'tout' est cochée ou non par defaut (true par défaut)
+         $checked : spÃ©cifie si la 'option 'tout' est cochÃ©e ou non par defaut (true par dÃ©faut)
 
 
 exemple:
@@ -26,7 +26,7 @@ exemple:
 
  include_once(XOOPS_ROOT_PATH . '/class/xoopsform/formcheckboxall.php');
 
- $obChk = new XoopsFormCheckBoxAll("test case à cocher", "chkTest",array(55,54), '<br />');
+ $obChk = new XoopsFormCheckBoxAll("test case Ã  cocher", "chkTest",array(55,54), '<br />');
 
   // ajout des ooptins
   $obChk->addOption(55, 'Jean');

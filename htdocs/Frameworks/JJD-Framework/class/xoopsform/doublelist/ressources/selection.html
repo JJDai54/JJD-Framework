@@ -18,12 +18,12 @@
 <body>
 <form method="post" action="" name="configuration">
 
-<!-- Ce HIDDEN sert a stocké la liste des valeurs selectionné au moment ou l'on appuis sur le bouton de validation -->
+<!-- Ce HIDDEN sert a stockÃ© la liste des valeurs selectionnÃ© au moment ou l'on appuis sur le bouton de validation -->
 <input type="hidden" name="colonne" value="">
 
 <table>
 <tr>
-	<!-- SELECT qui contient la totalité des valeur possibles -->
+	<!-- SELECT qui contient la totalitÃ© des valeur possibles -->
 	<td>
 		<select name="colonne_stock" size="10" multiple style="width:200px" ondblclick="add_colonne();"></select>
 	</td>
@@ -36,7 +36,7 @@
 		<input type="button" class="button" style="background:url('images/remove_all.png');" onclick="remove_all_colonne();">
 	</td>
 
-	<!-- SELECT qui contient uniquement les valeurs selectionnés -->
+	<!-- SELECT qui contient uniquement les valeurs selectionnÃ©s -->
 	<td>
 		<select name="colonne_afficher" size="10" multiple style="width:200px" ondblclick="remove_colonne();"></select>
 	</td>
@@ -62,20 +62,20 @@
 var c1 = document.configuration.colonne_stock ; // liste de gauche
 var c2 = document.configuration.colonne_afficher ; // liste de droite
 
-// on déclare les valeurs possible
-// SYNTAX    identifiant : libélé
+// on dÃ©clare les valeurs possible
+// SYNTAX    identifiant : libÃ©lÃ©
 var colonne_texts = {	'photo':'Photos',
 						'marque' : 'Marque',
 						'prix' : 'Prix',
 						'genre' : 'Genre',
 						'boite':'Boite',
 						'energie':'Energie',
-						'proprietaire' : 'Propriétaire',
-						'reservation':'Réservations',
+						'proprietaire' : 'PropriÃ©taire',
+						'reservation':'RÃ©servations',
 						'commentaire':'Commentaires'
 					};
 
-// initialisation de la selection  PAR DÉFAUT
+// initialisation de la selection  PAR DÃ‰FAUT
 var init_droite = 'genre,prix,energie' ;
 var colonne_init   = init_droite.split(',');
 
@@ -110,7 +110,7 @@ function add_all_colonne()
 // supprime toutes les valeurs de la seclection
 function remove_all_colonne()
 {
-	// on réinitialise la liste de gauche
+	// on rÃ©initialise la liste de gauche
 	while(c1.options.length > 0)
 		c1.options[0] = null
 	
@@ -136,7 +136,7 @@ function add_colonne()
 			a_supp.push(c1.options[i].value);
 		}
 
-	// on supprime les colonne passé a droite pour ne plus les rendre disponible a la selection
+	// on supprime les colonne passÃ© a droite pour ne plus les rendre disponible a la selection
 	for(i=0 ; i<c1.options.length ; i++)
 		for (j=0 ; j<a_supp.length ; j++)
 			if (c1.options[i].value == a_supp[j])
@@ -147,7 +147,7 @@ function add_colonne()
 function remove_colonne()
 {	var a_supp = new Array();
 	
-	// on réenvoi les valeurs selectionné dans la liste de gauche
+	// on rÃ©envoi les valeurs selectionnÃ© dans la liste de gauche
 	for(i=0 ; i<c2.options.length ; i++)
 	{	if (c2.options[i].selected)
 		{	c1.options[c1.options.length] = new Option(c2.options[i].text,c2.options[i].value);
@@ -163,7 +163,7 @@ function remove_colonne()
 }
 
 
-// permet de remonter les valeurs selectionnées dans la liste de droite
+// permet de remonter les valeurs selectionnÃ©es dans la liste de droite
 function move_up()
 {
 	for(i=0 ; i<c2.options.length ; i++)
@@ -177,7 +177,7 @@ function move_up()
 				c2.options[i - 1].text = c2.options[i].text ;
 				c2.options[i - 1].value = c2.options[i].value ;
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				c2.options[i].text = temp_text ;
 				c2.options[i].value = temp_value ;
 
@@ -190,7 +190,7 @@ function move_up()
 }
 
 
-// permet de dessendre les valeurs selectionnées dans la liste de droite
+// permet de dessendre les valeurs selectionnÃ©es dans la liste de droite
 function move_down()
 {	for(i=c2.options.length - 1 ; i>=0 ; i--) // ATTENTION on commence par la fin du tableau
 	{	if (c2.options[i].selected)
@@ -203,7 +203,7 @@ function move_down()
 				c2.options[i + 1].text = c2.options[i].text ;
 				c2.options[i + 1].value = c2.options[i].value ;
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				c2.options[i].text = temp_text ;
 				c2.options[i].value = temp_value ;
 
@@ -216,7 +216,7 @@ function move_down()
 }
 
 
-// donne la liste des valeur selectionné et dans l'ordre !
+// donne la liste des valeur selectionnÃ© et dans l'ordre !
 function get_selection()
 {
 	var tmp = new Array();

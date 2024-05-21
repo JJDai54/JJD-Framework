@@ -70,7 +70,7 @@ class XoopsFormTableTray extends XoopsFormElement
     }
     
     function addGlobalTdStyle($globalTdStyle){
-        //ajoute un ";" si il n'est pas présent
+        //ajoute un ";" si il n'est pas prÃ©sent
         $this->_globalTdStyle[] = $globalTdStyle . ((substr($globalTdStyle,-1,1) != ';') ? ';' : '' );
     }
     /**
@@ -78,7 +78,7 @@ class XoopsFormTableTray extends XoopsFormElement
      * @element : xoopsform a ajouter
      * @numCol : numero de colonne de destination
      * @numRow : numero de ligne de destination
-     * @delimiter : default '<br>' - Delimiteur si plusieurs objets sont dans la même cellule
+     * @delimiter : default '<br>' - Delimiteur si plusieurs objets sont dans la mÃªme cellule
      * @return bool
      */
     function addElement($element, $numCol, $numRow = 0, $delimiter = '<br>')
@@ -100,7 +100,7 @@ class XoopsFormTableTray extends XoopsFormElement
     
     function addTdStyle($numCol, $tdStyle){
         if(is_null($numCol) || $numCol<0) $numCol = 0;
-        //ajoute un ";" si il n'est pas présent
+        //ajoute un ";" si il n'est pas prÃ©sent
         $this->_tdStyle[$numCol][] = $tdStyle  . ((substr($tdStyle,-1,1) != ';') ? ';' : '' );
     }
     
@@ -133,7 +133,7 @@ class XoopsFormTableTray extends XoopsFormElement
              //$tHtml[] = ".tblForm {" . implode('', $this->_style) . "}\n";
              $tHtml[] = "</style>\n";
         
-        // Ajout des élement invisible (hidden
+        // Ajout des Ã©lement invisible (hidden
           
         for ($h = 0; $h < count($this->_hiddens); $h++)
              $tHtml[] = $this->_hiddens[$h]->render();

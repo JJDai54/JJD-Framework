@@ -36,29 +36,29 @@ var $_img2 = 'grey.png';
 
     /**
      * cursor : cursor affiche au survol des images 
-     * La propriÈte de feuille de style cursor css peut prendre la valeur de :
+     * La propri√©te de feuille de style cursor css peut prendre la valeur de :
 - auto,
-- nw-resize, curseur en forme de double petite flËche en diagonale bas droit vers haut gauche,
+- nw-resize, curseur en forme de double petite fl√®che en diagonale bas droit vers haut gauche,
 - crosshair, curseur en forme de croix fine,
-- n-resize, curseur en forme de double petite flËche verticale,
-- default, curseur en forme de grosse flËche,
-- se-resize, curseur en forme de double petite flËche en diagonale bas droit vers haut gauche,
-- pointer, curseur en forme de main avec un doigt dÈpliÈ,
-- sw-resize, curseur en forme de curseur en forme de double petite flËche en diagonale bas gauche vers haut droit,
-- move curseur en forme de quatre flËches en croix,
-- s-resize, curseur en forme de double petite flËche verticale,
-- e-resize, curseur en forme de double petite flËche horizontale,
-- w-resize, curseur en forme de double petite flËche horizontale,
-- ne-resize, curseur en forme de double petite flËche en diagonale bas gauche vers haut droit,
+- n-resize, curseur en forme de double petite fl√®che verticale,
+- default, curseur en forme de grosse fl√®che,
+- se-resize, curseur en forme de double petite fl√®che en diagonale bas droit vers haut gauche,
+- pointer, curseur en forme de main avec un doigt d√©pli√©,
+- sw-resize, curseur en forme de curseur en forme de double petite fl√®che en diagonale bas gauche vers haut droit,
+- move curseur en forme de quatre fl√®ches en croix,
+- s-resize, curseur en forme de double petite fl√®che verticale,
+- e-resize, curseur en forme de double petite fl√®che horizontale,
+- w-resize, curseur en forme de double petite fl√®che horizontale,
+- ne-resize, curseur en forme de double petite fl√®che en diagonale bas gauche vers haut droit,
 - text, curseur en forme de sorte de grand I,
-- help, curseur en forme de flËche et "?",
+- help, curseur en forme de fl√®che et "?",
 - wait, curseur en forme de sablier,
-- inherit, la forme du curseur hÈrite de son parent
-- progress, curseur en forme de flËche avec sablier,
-- not-allowed, curseur en forme de rond barrÈ,
-- no-drop, curseur en forme de main avec un doigt dÈpliÈ avec un rond barrÈ,
-- col-resize, curseur fait de deux traits verticaux avec une flËche de chaque cotÈ.
-- row-resize, curseur fait de deux traits horizontaux avec une flËche de chaque cotÈ.          
+- inherit, la forme du curseur h√©rite de son parent
+- progress, curseur en forme de fl√®che avec sablier,
+- not-allowed, curseur en forme de rond barr√©,
+- no-drop, curseur en forme de main avec un doigt d√©pli√© avec un rond barr√©,
+- col-resize, curseur fait de deux traits verticaux avec une fl√®che de chaque cot√©.
+- row-resize, curseur fait de deux traits horizontaux avec une fl√®che de chaque cot√©.          
      *
      * @var string
      * @access private
@@ -233,7 +233,7 @@ function __construct($caption,
    }
 
   /**
-   *  round >=  0 : arrondi au nombre de cÈcimale, les image seront partielles
+   *  round >=  0 : arrondi au nombre de c√©cimale, les image seront partielles
    *        = -1 : arrondi a l'entier inferieur
    *        = -2 : Arrondi a l'entier superrieur
    *
@@ -269,7 +269,7 @@ function __construct($caption,
    *              0 = pas d'affichage
    *              1 = Fixe sous le composant
    *              +-# = Mobile horizontelement sous le composant 
-   *                  la valeur est ajoutÈe a la position en x (acepte une valeur nÈgative)         
+   *                  la valeur est ajout√©e a la position en x (acepte une valeur n√©gative)         
    * @var integer
    * @access public
    */
@@ -305,7 +305,7 @@ function __construct($caption,
    
                                              /**
      * outMode : mode d'affichage
-     *          'r' = affichage simple sans interractivitÈ
+     *          'r' = affichage simple sans interractivit√©
      *          'w' = Affichage avec interractivite et enregistrement d'une nouvelle note           
      *
      * @var string
@@ -548,9 +548,9 @@ function render_write(){
      }
      
      
-     /* ce div sert uniquement a eviter le sintillement de la bulle qui est refermÈe et rÈouverte
+     /* ce div sert uniquement a eviter le sintillement de la bulle qui est referm√©e et r√©ouverte
         quand on passe de imgo a img1 et a img2;
-        en faisant comme ca c'est ce div qui recouvre tout qui gÈnÈre l'evennement.
+        en faisant comme ca c'est ce div qui recouvre tout qui g√©n√©re l'evennement.
      */     
      //$t[] = "<div style=\"float:left;\" ></div>";
           

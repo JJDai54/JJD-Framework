@@ -111,7 +111,7 @@ function dblList_addSelection(id0)
 			a_supp.push(dblList_c1.options[i].value);
 		}
 
-	// on supprime les colonne passé a droite pour ne plus les rendre disponible a la selection
+	// on supprime les colonne passÃ© a droite pour ne plus les rendre disponible a la selection
 	for(i=0 ; i<dblList_c1.options.length ; i++)
 		for (j=0 ; j<a_supp.length ; j++)
 			if (dblList_c1.options[i].value == a_supp[j])
@@ -128,7 +128,7 @@ function dblList_removeSelection(id0)
 
 	var a_supp = new Array();
 	
-	// on réenvoi les valeurs selectionné dans la liste de gauche
+	// on rÃ©envoi les valeurs selectionnÃ© dans la liste de gauche
 	for(i=0 ; i<dblList_c2.options.length ; i++)
 	{	if (dblList_c2.options[i].selected)
 		{	dblList_c1.options[dblList_c1.options.length] = new Option(dblList_c2.options[i].text,dblList_c2.options[i].value);
@@ -147,7 +147,7 @@ function dblList_removeSelection(id0)
 }
 
 
-// permet de remonter les valeurs selectionnées dans la liste de droite
+// permet de remonter les valeurs selectionnÃ©es dans la liste de droite
 function dblList_moveUp(id0)
 {
   init_objets(id0);  
@@ -163,7 +163,7 @@ function dblList_moveUp(id0)
 				dblList_c2.options[i - 1].text = dblList_c2.options[i].text ;
 				dblList_c2.options[i - 1].value = dblList_c2.options[i].value ;
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				dblList_c2.options[i].text = temp_text ;
 				dblList_c2.options[i].value = temp_value ;
 
@@ -180,7 +180,7 @@ function dblList_moveUp(id0)
 }
 
 
-// permet de dessendre les valeurs selectionnées en haut dans la liste de droite
+// permet de dessendre les valeurs selectionnÃ©es en haut dans la liste de droite
 function dblList_moveTop(id0)
 {
   init_objets(id0);  
@@ -201,7 +201,7 @@ function dblList_moveTop(id0)
         
         }
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				dblList_c2.options[j].text = temp_text ;
 				dblList_c2.options[j].value = temp_value ;
 
@@ -218,7 +218,7 @@ function dblList_moveTop(id0)
 
 }
 
-// permet de dessendre les valeurs selectionnées en bas dans la liste de droite
+// permet de dessendre les valeurs selectionnÃ©es en bas dans la liste de droite
 function dblList_moveBottom(id0)
 {
   init_objets(id0);  
@@ -240,7 +240,7 @@ function dblList_moveBottom(id0)
         
         }
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				dblList_c2.options[j].text = temp_text ;
 				dblList_c2.options[j].value = temp_value ;
 
@@ -257,7 +257,7 @@ function dblList_moveBottom(id0)
 
 }
 
-// permet de dessendre les valeurs selectionnées dans la liste de droite
+// permet de dessendre les valeurs selectionnÃ©es dans la liste de droite
 function dblList_moveDown(id0)
 {	
   init_objets(id0);  
@@ -273,7 +273,7 @@ function dblList_moveDown(id0)
 				dblList_c2.options[i + 1].text = dblList_c2.options[i].text ;
 				dblList_c2.options[i + 1].value = dblList_c2.options[i].value ;
 
-				// on recopie la sauvegarde sur l'option selectionnée
+				// on recopie la sauvegarde sur l'option selectionnÃ©e
 				dblList_c2.options[i].text = temp_text ;
 				dblList_c2.options[i].value = temp_value ;
 
@@ -288,7 +288,7 @@ function dblList_moveDown(id0)
 	dblList_updateValue(id0);
 }
 
-// donne la liste des valeurs selectionné et dans l'ordre !
+// donne la liste des valeurs selectionnÃ© et dans l'ordre !
 function dblList_updateValue(id0)
 {
   init_objets(id0);  
@@ -305,7 +305,7 @@ function dblList_updateValue(id0)
 	obx.value = tmp;
 }	
 
-// donne la liste des valeur selectionnées et dans l'ordre !
+// donne la liste des valeur selectionnÃ©es et dans l'ordre !
 function dblList_getValue(id0)
 {
   
@@ -321,7 +321,7 @@ function dblList_getValue(id0)
 	
 }	
 
-// donne la liste des valeur selectionnées et dans l'ordre !
+// donne la liste des valeur selectionnÃ©es et dans l'ordre !
 function dblList_show(id0)
 {
 

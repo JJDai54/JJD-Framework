@@ -7,7 +7,7 @@
 
 /********************************************************
  * constructeur
- * jsap : tableau json qui contient toutes les varaibles nécéssaire a la classe
+ * jsap : tableau json qui contient toutes les varaibles nÃ©cÃ©ssaire a la classe
  *        value, smallIncrement, largeIncrement, ....  
  * ini : tableau json qui contient le contnu du fichier ini du skin
  *        taille des image et definition des 'area' du 'map'  

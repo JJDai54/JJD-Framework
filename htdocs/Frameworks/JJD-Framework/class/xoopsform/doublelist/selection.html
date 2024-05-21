@@ -21,28 +21,28 @@
 <table>
   <tr>
     <td>
-<p>Ce script est adapté de.<a href="http://www.javascriptfr.com/codes/SELECTION-VALEURS-PARTIR-LISTES-CHOIX-MUPLIPLES_38199.aspx">Ryosama
+<p>Ce script est adaptÃ© de.<a href="http://www.javascriptfr.com/codes/SELECTION-VALEURS-PARTIR-LISTES-CHOIX-MUPLIPLES_38199.aspx">Ryosama
 =&gt;&gt;&gt; ICI</a> et j'ai fait les adaptations suivantes</p>
 <ul>
   <li>Externalisation des javascript</li>
   <li>Regroupement des images dans des sous dossier images avec plusieurs
     jeux&nbsp; pour faciliter le choix du jeu d'images.</li>
-  <li>Remplacement de l'utilisation de l'attribut 'name' par 'id' plus pratique puisqu'il doit être unique.</li>
-  <li>Possibilité d'avoir plusieurs jeux de listes. pour cela j'ai utilisé un system de
-    préfixe.<br>
-    L'id des deux liste commence par ce préfixe et se termine respectivement par '_source' et
+  <li>Remplacement de l'utilisation de l'attribut 'name' par 'id' plus pratique puisqu'il doit Ãªtre unique.</li>
+  <li>PossibilitÃ© d'avoir plusieurs jeux de listes. pour cela j'ai utilisÃ© un system de
+    prÃ©fixe.<br>
+    L'id des deux liste commence par ce prÃ©fixe et se termine respectivement par '_source' et
     '_selection'.<br>
-    La balise hidden qui est permet de recueillir la liste des items sélectionné a pour 'id' le
-    préfixe seul..<br>
-    Enfin ce préfixe est passé en paramètre à tous les appels de fonctions pour
+    La balise hidden qui est permet de recueillir la liste des items sÃ©lectionnÃ© a pour 'id' le
+    prÃ©fixe seul..<br>
+    Enfin ce prÃ©fixe est passÃ© en paramÃ¨tre Ã  tous les appels de fonctions pour
     permettre l'identification des deux listes en jeu.<br>
-    Dans l'exemple le premier jeu utilise le préfixe 'dbList' et le deuxième jeu utilise le préfixe 'JJD'.<br>
+    Dans l'exemple le premier jeu utilise le prÃ©fixe 'dbList' et le deuxiÃ¨me jeu utilise le prÃ©fixe 'JJD'.<br>
   </li>
   <li>Ajout du des boutons &quot;top&quot; et &quot;bottom&quot; pour placer la
-    sélection en haut ou en bas de liste.</li>
+    sÃ©lection en haut ou en bas de liste.</li>
   <li>Gestion du 'double-clique' sur chacune des listes.</li>
-  <li>Mise à jour systématique de la leur de retour dans la balise hidden.</li>
-  <li>Forcage de la largeur des listes pour éviter les recadrage intempestif.</li>
+  <li>Mise Ã  jour systÃ©matique de la leur de retour dans la balise hidden.</li>
+  <li>Forcage de la largeur des listes pour Ã©viter les recadrage intempestif.</li>
   <li>Choix de la couleur de fond dans la fonction d'initialisation.</li>
 </ul>
     </td>
@@ -51,13 +51,13 @@
 
 <form method="post" action="" name="configuration">
 
-<!-- Ce HIDDEN sert a stocké la liste des valeurs selectionné au moment ou l'on appuis sur le bouton de validation -->
+<!-- Ce HIDDEN sert a stockÃ© la liste des valeurs selectionnÃ© au moment ou l'on appuis sur le bouton de validation -->
 <input type="hidden" id="dbList" value="zzz">
 <input type="hidden" id="dbList_t" value="">
 
 <table>
 <tr>
-	<!-- SELECT qui contient la totalité des valeur possibles -->
+	<!-- SELECT qui contient la totalitÃ© des valeur possibles -->
 	<td>
 		<select id="dbList_source" size="10" multiple style="background-color:green;width:200px;" ondblclick="dblList_addSelection('dbList');"></select>
 	</td>
@@ -70,7 +70,7 @@
 		<input type="button" class="button" style="background:url('images/blue/remove_all.png');" onclick="dblList_removeAll('dbList');">
 	</td>
 
-	<!-- SELECT qui contient uniquement les valeurs selectionnés -->
+	<!-- SELECT qui contient uniquement les valeurs selectionnÃ©s -->
 	<td>
 		<select id="dbList_selection" size="10" multiple style="width:200px" ondblclick="dblList_removeSelection('dbList');"></select>
 	</td>
@@ -90,13 +90,13 @@
 </tr>
 </table>
 <hr>
-<!-- Ce HIDDEN sert a stocké la liste des valeurs selectionné au moment ou l'on appuis sur le bouton de validation -->
+<!-- Ce HIDDEN sert a stockÃ© la liste des valeurs selectionnÃ© au moment ou l'on appuis sur le bouton de validation -->
 <input type="hidden" id="JJD" value="">
 <input type="hidden" id="JJD_t" value="">
 
 <table>
 <tr>
-	<!-- SELECT qui contient la totalité des valeur possibles -->
+	<!-- SELECT qui contient la totalitÃ© des valeur possibles -->
 	<td>
 		<select id="JJD_source" size="10" multiple style="background-color:green;width:200px;" ondblclick="dblList_addSelection('JJD');"></select>
 	</td>
@@ -109,7 +109,7 @@
 		<input type="button" class="button" style="background:url('images/magenta/remove_all.png');" onclick="dblList_removeAll('JJD');">
 	</td>
 
-	<!-- SELECT qui contient uniquement les valeurs selectionnés -->
+	<!-- SELECT qui contient uniquement les valeurs selectionnÃ©s -->
 	<td>
 		<select id="JJD_selection" size="10" multiple style="background-color:yellow;width:200px" ondblclick="dblList_removeSelection('JJD');"></select>
 	</td>

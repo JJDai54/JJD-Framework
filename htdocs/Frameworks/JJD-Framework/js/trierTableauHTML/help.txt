@@ -4,9 +4,9 @@ site    : http://jubile.fr
 ===============================================================================
 installation:
 -------------
-L'installationde ce script est décrite pour le CMS Xoops,
-cependant il peux être utilisé avec d'autres environnement, en modifiant notamment l'inclusion du script.
-Copier le dossier complet "trierTableauHTML" dans le répertoire "Frameworks"
+L'installationde ce script est dÃ©crite pour le CMS Xoops,
+cependant il peux Ãªtre utilisÃ© avec d'autres environnement, en modifiant notamment l'inclusion du script.
+Copier le dossier complet "trierTableauHTML" dans le rÃ©pertoire "Frameworks"
 Ne pas changer le nom du dossier
 
 ===============================================================================
@@ -18,7 +18,7 @@ $xoTheme->addScript(XOOPS_URL . '/Frameworks/trierTableauHTML/trierTableau.js');
 - Definisser l'id du tableau html
 - definisser les titre de la table avec la balise "<th>"
 - encadrer les lignes de titres avec la balise "<thead>"
-- À la fin du tableau HTML ajouter un appel à la fonction "trierTableau".
+- Ã€ la fin du tableau HTML ajouter un appel Ã  la fonction "trierTableau".
 
 Exemple 1: 
 ---------------------------------------------
@@ -47,23 +47,23 @@ function tth_trierTableau(idTbl, [defautCol2sort = 0], [cols2sort = ""], [sRoot 
 
 idTbl : slides_list est l'id du tableau html
 
-defautCol2sort : indique la colonne de tri par défaut (défaut : 0).
-     La première colonne est la n° 1
+defautCol2sort : indique la colonne de tri par dÃ©faut (dÃ©faut : 0).
+     La premiÃ¨re colonne est la nÂ° 1
      Mettre 0 pour garder le tri initial
 
 cols2sort : Liste des colonnes que l'on pourra trier. 
      Une chaine vide mettra toute les colonnes de tri.
-     La première colonne est la n° 1
-     Séparateurs utilisables : | - , ; /
+     La premiÃ¨re colonne est la nÂ° 1
+     SÃ©parateurs utilisables : | - , ; /
 
 sRoot : chemin URL ou se trouve le dossirt trierTableauHTML.
      Laisser vide pour Xoops
-     Par défaut http://monsite/Frameworks
-     Utilisé par les images ajoutées au titre des colonnes.
+     Par dÃ©faut http://monsite/Frameworks
+     UtilisÃ© par les images ajoutÃ©es au titre des colonnes.
 
 
 ===============================================================================            
-il est possible d'initialiser certaines option en ajoutant un appel à la fonction "tth_init" ou "tth_set_value" avant l'appel à "tth_trierTableau"
+il est possible d'initialiser certaines option en ajoutant un appel Ã  la fonction "tth_init" ou "tth_set_value" avant l'appel Ã  "tth_trierTableau"
 Exemple 2:
 ---------------------------------------------
 <script>
@@ -80,23 +80,23 @@ tth_trierTableau('slides_list', 2, '2|3|4|8|9', '<{$smarty.const.XOOPS_URL}>/Fra
 </script>
 ---------------------------------------------
 
-liste des options possibles à passer dans le tableaude la fonction "tth_init" ou avec la fonction "tth_set_value"
+liste des options possibles Ã  passer dans le tableaude la fonction "tth_init" ou avec la fonction "tth_set_value"
 ------------------------------------------------------
-"posImg"    : 'left' ou 'right' affiche les icones qui indiquent le sens du tri à gauche ou à droite du titre,
+"posImg"    : 'left' ou 'right' affiche les icones qui indiquent le sens du tri Ã  gauche ou Ã  droite du titre,
 "skin"      : nom du dossier de skin, voir les skins dans le dossier images du frameworks
-"asc"       : boollean, indique le sens de tri par défaut;
-"last_asc"  : false : l'ordre de tri des colonnes inactives restent toujours le même selon "asc"
-              true  : l'ordre de tri change à chaque clique sur la même colonne et prend la dernier actif.
-'localLang' : valeur par défaut = "fr". Défini le type de tri pour les chaine et les dates.
-'margin'    : marges de l'icones sous la forme "0px 4px 0px 4px". valeur par défaut : "0px 4px 0px 4px".
+"asc"       : boollean, indique le sens de tri par dÃ©faut;
+"last_asc"  : false : l'ordre de tri des colonnes inactives restent toujours le mÃªme selon "asc"
+              true  : l'ordre de tri change Ã  chaque clique sur la mÃªme colonne et prend la dernier actif.
+'localLang' : valeur par dÃ©faut = "fr". DÃ©fini le type de tri pour les chaine et les dates.
+'margin'    : marges de l'icones sous la forme "0px 4px 0px 4px". valeur par dÃ©faut : "0px 4px 0px 4px".
 
 ===============================================================================
 Astuces :
 ---------
 Pour les colones qui affichent une icone, le tri ne peut pas se faire sur un image.
-Par contre il est possible avant l'icone ou le lien sur l'icone d'ajouter un texte ou une valeur numérique invisible.
+Par contre il est possible avant l'icone ou le lien sur l'icone d'ajouter un texte ou une valeur numÃ©rique invisible.
 exemple d'une colonne qui affiche status avec une icone "actif/inactif" et un lien permettant de changer le status.
-Noter l'ajout de la balise <span style='visibility:hidden;'><{$slide.actif}></span> avec la valeur numérique , qui permettra le tri sur cette valeur.
+Noter l'ajout de la balise <span style='visibility:hidden;'><{$slide.actif}></span> avec la valeur numÃ©rique , qui permettra le tri sur cette valeur.
 ----------------------------------------------
     <td class='center'>
         <{* texte invisible pour le tri *}>

@@ -169,8 +169,8 @@ function loadXForm($name){
 
 /* *******
 * Charge les xforms du framework
-* $namesString  string : liste des xform séparés par $sep
-* $sep string : searateur des noms à charger
+* $namesString  string : liste des xform sÃ©parÃ©s par $sep
+* $sep string : searateur des noms Ã  charger
 ****** */
 function loadXForms($namesString, $sep = ","){
     $arr = explode($sep, $namesString);
@@ -188,7 +188,7 @@ function loadXForms($namesString, $sep = ","){
 function loadAllXForms(){
     xoops_load('XoopsFormLoader');      
        
-    //chargement des xforms composés d'un dossier
+    //chargement des xforms composÃ©s d'un dossier
     $arr = \XoopsLists::getDirListAsArray(JJD_PATH_XFORMS);
 //    echoArray($arr);
 
@@ -199,7 +199,7 @@ function loadAllXForms(){
         //echo "{$f}<br>";
     }
     
-    //chargement des xforms formés d'un seul fichier
+    //chargement des xforms formÃ©s d'un seul fichier
     $arr = \XoopsLists::getFileListAsArray(JJD_PATH_XFORMS);
     //echoArray($arr);
     foreach ($arr as $key=>$file){

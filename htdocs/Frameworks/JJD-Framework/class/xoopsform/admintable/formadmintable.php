@@ -97,7 +97,7 @@ XoopsFormAdminTable::col_zoom
 
 /*
 tbl->columns->caption
-            ->key  // doit correspondre pour les données à une clé du tableau ou du rst
+            ->key  // doit correspondre pour les donnÃ©es Ã  une clÃ© du tableau ou du rst
             ->type ///voir la nomenclature ci-dessous
    ->params-> //parametre temporaires pour eviter de les passer en parametres dans les fonctions internes 
    
@@ -106,7 +106,7 @@ tbl->columns->caption
     /**
      * arrayData : tableau de donnees a afficher. optionael, le composant affiche
      * arrayData s'il n'est pas vide et queryData sil il n'est pas vide. 
-     * que ce sot l'un ou l'autre seuls seront affichés les enttre 
+     * que ce sot l'un ou l'autre seuls seront affichÃ©s les enttre 
      * dont les a cles correspondent aux cles du tableau "titles"
      * normalement ces correspondes aux nom de champs de la source de donnees              
      *
@@ -129,7 +129,7 @@ tbl->columns->caption
     /**
      * titles : tableau de description des colonnes. 
      * chaque iteme du tableau est un tableau associatif defini comme suit:
-     *     key : Clé utilsee comme lien avec arayData et queryData (nom des colonnes)
+     *     key : ClÃ© utilsee comme lien avec arayData et queryData (nom des colonnes)
      *     caption : Titre a afficher pour chaque colonne
      *     style   : attribut html style pour l'ffichage du ttre.  
      * exemple:
@@ -180,7 +180,7 @@ tbl->columns->caption
     /**
      * title : titre du tableau  
      *      Le titre est affiche si non vide
-     *      il est pacé au dessus des titre de colonne          
+     *      il est pacÃ© au dessus des titre de colonne          
      *      <caption class='head' style='border-style: solid; border-width: 1px;'>{$this->getCaption()}</caption>"
      *
      * @var string
@@ -196,12 +196,12 @@ tbl->columns->caption
      * exemple : delette, edit, ....          
      * description des tableaux associatifs:
      *     $t = array(); 
-     *     $t['link']  = $link; URL du lien lié a l'icone
+     *     $t['link']  = $link; URL du lien liÃ© a l'icone
      *     $t['icon']  = $icon; Url de l'icone a afficher
      *     $t['title'] = $title; infobulle de l'image
      *     $t['op']    = $op; nom de l'attribut 'op' du lien
      *     $t['opAttributName'] = $opAttributName; nom de l'attribut op du lien 'op' par defaut
-     *    $this->_actions[$key][] = $t; la clé dans le tableu principal doit correspondre a une clé
+     *    $this->_actions[$key][] = $t; la clÃ© dans le tableu principal doit correspondre a une clÃ©
      *  du tableau des titres de colonnes, sot le nom d'un champ.     
      *
      * @var array mixed array
@@ -223,7 +223,7 @@ tbl->columns->caption
      *  $t['op']       = $op;
      *  $t['opAttributName']    = $opAttributName;
      *
-     *  $this->_links[$key] = $t; la clé dans le tableu principal doit correspondre a une clé
+     *  $this->_links[$key] = $t; la clÃ© dans le tableu principal doit correspondre a une clÃ©
      *  du tableau des titres de colonnes, sot le nom d'un champ.     
      *
      * @var array mixed array
@@ -248,10 +248,10 @@ tbl->columns->caption
     /**
      * icons : Ce tableau de tableau associatif Permet de remplacer le contenu 
      *         d'une cellule par une icone selon sa valeur
-     *         Permet aussi d'ajouter un lien différent sur l'icone selon la valeur du champ
+     *         Permet aussi d'ajouter un lien diffÃ©rent sur l'icone selon la valeur du champ
      *         exmple des des champs boolean. 
      *         supposons un chmp nomme "actif" selon qu'il est vrai ou faux, 
-     *         l'icone affiche pourra etre différente.
+     *         l'icone affiche pourra etre diffÃ©rente.
      *         Un lien pourra etre ajoute par esemple lorsque q'uil est faux
      *         Pour appeler une une procedure qui le rendra actif                     
      *           
@@ -265,7 +265,7 @@ tbl->columns->caption
      *  $t['op']       = $op;
      *  $t['opAttributName']    = $opAttributName;
     
-    *    $this->_icons[$key] = $t; la clé dans le tableu principal doit correspondre a une clé
+    *    $this->_icons[$key] = $t; la clÃ© dans le tableu principal doit correspondre a une clÃ©
      *  du tableau des titres de colonnes, sot le nom d'un champ.     
      *
      * @var array mixed array
@@ -328,7 +328,7 @@ tbl->columns->caption
      * @var array mixed array
      * @access private
      */
-    var $_cols= 0; //nombre de colonne affichees calculées lors du render()
+    var $_cols= 0; //nombre de colonne affichees calculÃ©es lors du render()
     
     /**
      * $_prefixName :  
@@ -519,7 +519,7 @@ tbl->columns->caption
   }     
     /********************************************************************
      * Controle chaque colonne et selon le type ajoute ou caclul les options manquantes
-     * pour ne pas avoir a le faire à chaque ligne du tableau.        
+     * pour ne pas avoir a le faire Ã  chaque ligne du tableau.        
      ********************************************************************/    
     function _valid_columns()
     { 
@@ -566,7 +566,7 @@ tbl->columns->caption
 
           break;
         //-------------------------------------------------------------------  
-//         case self::col_zoom : // affichage d'une image avec zoom sur une deuxième image
+//         case self::col_zoom : // affichage d'une image avec zoom sur une deuxiÃ¨me image
 //           if (isset($options['original'])){
 //             $options['zoom'] = true;
 //           }
@@ -701,8 +701,8 @@ tbl->columns->caption
       $this->colOption($column, $key, $value);
     }
     /********************************************************************
-     * Ajoute une options à la colonnes dont la cle est passer en parametre
-     * Il est préférable d'avoir au préalable créer la colonne avec "addColumn"     
+     * Ajoute une options Ã  la colonnes dont la cle est passer en parametre
+     * Il est prÃ©fÃ©rable d'avoir au prÃ©alable crÃ©er la colonne avec "addColumn"     
      ********************************************************************/    
     function colOption($column, $key, $value)
     { 
@@ -728,8 +728,8 @@ tbl->columns->caption
       $this->_columns[$column]['options'][$key] = $value;
     }
     /********************************************************************
-     * Ajoute une options à la colonnes dont la cle est passer en parametre
-     * Il est préférable d'avoir au préalable créer la colonne avec "addColumn"     
+     * Ajoute une options Ã  la colonnes dont la cle est passer en parametre
+     * Il est prÃ©fÃ©rable d'avoir au prÃ©alable crÃ©er la colonne avec "addColumn"     
      ********************************************************************/    
     function addOptionArray($column, $options)
     {
@@ -737,7 +737,7 @@ tbl->columns->caption
     }
     
   /*********************************************************************
-   * permet de fusioner pluisuers données dans une meme colonne
+   * permet de fusioner pluisuers donnÃ©es dans une meme colonne
    *********************************************************************/
   function merge(){
      $this->setCurrentColumn($column);
@@ -756,7 +756,7 @@ tbl->columns->caption
   }
     
   /*********************************************************************
-   * permet de fusioner pluisuers données dans une meme colonne
+   * permet de fusioner pluisuers donnÃ©es dans une meme colonne
    *********************************************************************/
   function colMerge($column){
      $t = array_slice(func_get_args(), 1);
@@ -935,7 +935,7 @@ tbl->columns->caption
     /*********************************************************************
      * Encadre le tableau HTML dans un formulaire
      * Il n'est pas possible pour l'instant d'ajouter les boutons de validation
-     * aussi le submit doit être fait via un bouton externe et une commande javascript
+     * aussi le submit doit Ãªtre fait via un bouton externe et une commande javascript
      * exemple:
      *  $extra = "javascript: document.forms[\"myform\"].elements[\"op\"].value=\"activer_selection\";"
      *                     . "document.forms[\"myform\"].submit();";
@@ -1071,11 +1071,11 @@ tbl->columns->caption
     /*********************************************************************
      *  Extrait les nom de champ entre accolades dans l'expression passe en parametre
      *  utilise notamment pour les lien pour remplacer par exemple un identifiant pour chaque ligne     
-     *  $exp peut être un tableau d'expressions ou une expression simple
+     *  $exp peut Ãªtre un tableau d'expressions ou une expression simple
      *  les mot cle cherches son entr accolade
      *  exemple "idTogodo={idTogodo}"     
-     *          {idTogodo} sera remplace par l'identifiant ou la donnée de la ligne en cours
-     *          ce doit être une clé de $_data               
+     *          {idTogodo} sera remplace par l'identifiant ou la donnÃ©e de la ligne en cours
+     *          ce doit Ãªtre une clÃ© de $_data               
      *********************************************************************/
   private function _extract_keys($exp){
 //     $motif = "#.*\{(.*)\}.*#";    
@@ -1138,7 +1138,7 @@ tbl->columns->caption
      */
     function render($display = false)
     {
-//$this->_display_array($this->_columns,'Detail des colonnes définies');
+//$this->_display_array($this->_columns,'Detail des colonnes dÃ©finies');
 //$this->_display_array($this->_data,'Data');
 //$this->_display_array($this->_prefixName,'prefix des nom de champs');
 

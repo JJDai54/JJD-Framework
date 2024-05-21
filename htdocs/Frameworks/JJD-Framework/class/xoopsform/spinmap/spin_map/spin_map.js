@@ -18,7 +18,7 @@ debug = function (log_txt) {
 
 /*************************************************************
  * getion de l'eveennement onmouseover de la balise "map"
- * ls ossfet y de l'image sont décale selon la zone survolee   
+ * ls ossfet y de l'image sont dÃ©cale selon la zone survolee   
  **************************************************************/
 function spin_map_onMouseOver(event){
   //------------------------------------------  
@@ -51,7 +51,7 @@ function spin_map_onMouseOutDiv(event){
 
 /*************************************************************
  * gestion de l'evennement onmouseup de la balise "map"
- * la nouvelle valeur est affecté a la balise "input hidden" de validation du formulaire
+ * la nouvelle valeur est affectÃ© a la balise "input hidden" de validation du formulaire
  * et l'image est racle en posisiotn 0,0  
  **************************************************************/
 function spin_map_onMouseUp(event){
@@ -76,7 +76,7 @@ function spin_map_onMouseDown(event){
 }    
 /*************************************************************
  * gestion de l'evennement ontextchange de la balise "input text"
- * La valeur saisie est affectée a la balise "input hidden" de validation du formulaire 
+ * La valeur saisie est affectÃ©e a la balise "input hidden" de validation du formulaire 
  **************************************************************/
 function spin_map_onTextChange(event){
    spin = spin_map_getSpinEvent(event, "spin_map_onTextChange");  
@@ -86,7 +86,7 @@ function spin_map_onTextChange(event){
     spin.text2Val();
 }    
 /*************************************************************
- * initialistion de la classe affectée au spin button une fois construit le HTML
+ * initialistion de la classe affectÃ©e au spin button une fois construit le HTML
  **************************************************************/
 function spin_map_onLoad(id){
   spin = spin_map_getSpin(id);  
@@ -118,8 +118,8 @@ function spin_map_onLoad(id){
 
 
 /****************************************************************************
- * function utilisée uniquement pour des tests du callback
- * la formule est: IMC=masse (en kg)/ [taille(en mètre) au carré] 
+ * function utilisÃ©e uniquement pour des tests du callback
+ * la formule est: IMC=masse (en kg)/ [taille(en mÃ¨tre) au carrÃ©] 
  *  par exemple pour une taille de 1m70 et un poids de 70 kgs, 
  *  l' IMC sera de 70/(1,7*1,7)= 24,2   
  ***************************************************************************/

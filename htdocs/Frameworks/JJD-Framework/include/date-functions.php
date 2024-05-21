@@ -34,7 +34,7 @@ function getSqlDate($dateVar = null, $formatSql = 'Y-m-d H:i:s', $formatFrom = '
     return $ret;
   }
 
-// Convertit une date ou un timestamp en français
+// Convertit une date ou un timestamp en franÃ§ais
 function dateToLocale($dateStr, $langTo = 'FR', $langFrom = 'EN') 
 {
 

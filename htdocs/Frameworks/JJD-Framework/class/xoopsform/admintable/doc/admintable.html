@@ -14,7 +14,7 @@ SyntaxHighlighter.all();
 </script>
 <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="xdoc-jjd.css">
 <meta content="Jean-Jacques DELALANDRE" name="author">
-<meta content="Classe de génération de tableau HTML pour XOOPS" name="description"></head><body>
+<meta content="Classe de gÃ©nÃ©ration de tableau HTML pour XOOPS" name="description"></head><body>
 <p class="comTitle blockTitle" style="text-align: center; font-weight: bold;"><span></span><big><big><big>FORM
 ARRAY LIST<br>
 </big></big></big></p>
@@ -26,50 +26,50 @@ Auteur: <a href="http://xoops.kiolo.com/">Jean-Jacques
 DELALANDRE</a><br>
 Licence : GPL<br>
 <br><h1><a class="mozTocH1" name="mozTocId629007"></a>Sommaire</h1>
-<ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId629007">Sommaire</a></li><li><a href="#mozTocId360156">Présentation:</a></li><li><a href="#mozTocId769712">Installation</a></li><li><a href="#mozTocId623962">Utilisation</a><ol><li><a href="#mozTocId38444">
+<ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId629007">Sommaire</a></li><li><a href="#mozTocId360156">PrÃ©sentation:</a></li><li><a href="#mozTocId769712">Installation</a></li><li><a href="#mozTocId623962">Utilisation</a><ol><li><a href="#mozTocId38444">
 initialisation</a></li><li><a href="#mozTocId341864">
-&nbsp; Paramètres du constructeur:</a></li></ol></li><li><a href="#mozTocId623962">Propriétés</a></li><li><a href="#mozTocId623962">Méthodes</a></li><li><a href="#mozTocId623962">Description
-des tableaux utilisés dans la classe</a><ol><li><a href="#mozTocId810224">Titles : tableaux des titres de colonnes</a></li><li><a href="#mozTocId710024">Actions : Tableaux des icones liés à des actions ou des
-traitements</a></li><li><a href="#mozTocId399023">Icons:&nbsp;Tableaux icones affichés à la place du
+&nbsp; ParamÃ¨tres du constructeur:</a></li></ol></li><li><a href="#mozTocId623962">PropriÃ©tÃ©s</a></li><li><a href="#mozTocId623962">MÃ©thodes</a></li><li><a href="#mozTocId623962">Description
+des tableaux utilisÃ©s dans la classe</a><ol><li><a href="#mozTocId810224">Titles : tableaux des titres de colonnes</a></li><li><a href="#mozTocId710024">Actions : Tableaux des icones liÃ©s Ã  des actions ou des
+traitements</a></li><li><a href="#mozTocId399023">Icons:&nbsp;Tableaux icones affichÃ©s Ã  la place du
 contenu des champs</a></li><li><a href="#mozTocId475561">Links :&nbsp;Tableaux des liens sur le contenu des
-cellules</a></li></ol></li><li><a href="#mozTocId623962">Exemple complet tiré de la dernière version du module "photowalls"</a></li></ol>
+cellules</a></li></ol></li><li><a href="#mozTocId623962">Exemple complet tirÃ© de la derniÃ¨re version du module "photowalls"</a></li></ol>
 <span style="font-weight: bold;"><br>
 <br>
 </span><br>
 <a href="#mozTocId629007"><img src="images/home.gif" align="right"></a>
-<h1><a class="mozTocH1" name="mozTocId360156"></a>Présentation:</h1>
+<h1><a class="mozTocH1" name="mozTocId360156"></a>PrÃ©sentation:</h1>
 <p>Ce composant permet de construire un tableau simple comme dans
-l'exemple ci-dessous sans écrire une seule ligne de HTML. C'est la
+l'exemple ci-dessous sans Ã©crire une seule ligne de HTML. C'est la
 classe qui se charge de tout.</p><p><img style="width: 974px; height: 367px;" alt="" src="images/exemple-02.png"></p><p></p>Il permet :
 <ul>
-<li>L'affichage d'une liste, résultat d'une requête, ou un
+<li>L'affichage d'une liste, rÃ©sultat d'une requÃªte, ou un
 tableau PHP</li>
 <li>De
 remplacer les valeur de certain champs par des icones comme par xemple
 remplacer les valeur"0" et "1"&nbsp;du champ "actif" par des icones
 plus parlantes.</li>
 <li>D'ajouter des liens sur le contenu des cellule.</li>
-<li>D'ajouter des actions sous formes d'icônes &nbsp;comme
+<li>D'ajouter des actions sous formes d'icÃ´nes &nbsp;comme
 par exemple "Editer", 'Supprimer", "permissions", ...</li>
-<li>De spécifier le style d'afichagee pour chaque colonne,
+<li>De spÃ©cifier le style d'afichagee pour chaque colonne,
 position, couleur,, ...</li>
 <li>D'ajouter un titre au dessus du tableau.</li>
 </ul>
 <p>Il
-y a bien sur certaines limites, mais comme l'objectif était au départ
-de faciliter l'administration du site et de gérer les principales
+y a bien sur certaines limites, mais comme l'objectif Ã©tait au dÃ©part
+de faciliter l'administration du site et de gÃ©rer les principales
 actions pour une table dans le back-office.</p>
-<p>Les exemples utilisés viennent de la dernière version de
+<p>Les exemples utilisÃ©s viennent de la derniÃ¨re version de
 "photowalls" l'onglet "Murs de photos"</p>
 <br>
 <a href="#mozTocId629007"><img src="images/home.gif" align="right"></a>
 <h1><a class="mozTocH1" name="mozTocId769712"></a>Installation</h1>
-<p>Copier le&nbsp;dossier complet dans le répertoire
+<p>Copier le&nbsp;dossier complet dans le rÃ©pertoire
 "class/xoopsform/" du site.</p>
 <p style="text-align: center;"><br>
 </p>
-<p>Tous les fichiers ne sont pas nécessaires et si vous voulez
-économiser
+<p>Tous les fichiers ne sont pas nÃ©cessaires et si vous voulez
+Ã©conomiser
 l'espace disque, supprimer les fichiers inutiles pour l'exploitation du
 composant en vous aidant du tableau ci-dessous:<br>
 <br>
@@ -80,21 +80,21 @@ composant en vous aidant du tableau ci-dessous:<br>
 <br>
 <h2><a class="mozTocH2" name="mozTocId38444"></a><a class="mozTocH2" name="#mozTocId450970"></a> Initialisation</h2>
 <div class="code">
-<pre class="brush: php;">//inclure la classe de préférence dans le header.php de l'admin<br>include_once ( XOOPS_ROOT_PATH . "/class/xoopsform/admintable/formadmintable.php");<br><br>//Instanciation de la classe<br>$t = new XoopsFormAdminTable("photowalls_walls", "walls", [$class], [$style], [$titles]);<br><br><br></pre>
+<pre class="brush: php;">//inclure la classe de prÃ©fÃ©rence dans le header.php de l'admin<br>include_once ( XOOPS_ROOT_PATH . "/class/xoopsform/admintable/formadmintable.php");<br><br>//Instanciation de la classe<br>$t = new XoopsFormAdminTable("photowalls_walls", "walls", [$class], [$style], [$titles]);<br><br><br></pre>
 </div>
 <br>
 <br>
 <br>
 <h2><a class="mozTocH2" name="mozTocId341864"></a>
-&nbsp; Paramètres du constructeur:</h2>
+&nbsp; ParamÃ¨tres du constructeur:</h2>
 <br>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
-<td style="vertical-align: top; font-weight: bold; text-align: center;">Paramètre<br>
+<td style="vertical-align: top; font-weight: bold; text-align: center;">ParamÃ¨tre<br>
 </td>
 <td style="vertical-align: top; font-weight: bold; text-align: center;">type</td>
-<td style="vertical-align: top; font-weight: bold; text-align: center;">Défaut</td>
+<td style="vertical-align: top; font-weight: bold; text-align: center;">DÃ©faut</td>
 <td style="vertical-align: top; font-weight: bold; text-align: center;">description<br>
 </td>
 </tr>
@@ -104,7 +104,7 @@ composant en vous aidant du tableau ci-dessous:<br>
 </td>
 <td style="vertical-align: top;">Obligatoire<br>
 </td>
-<td style="vertical-align: top;">Chaine afecté aux
+<td style="vertical-align: top;">Chaine afectÃ© aux
 balise "name" et "id" de la table<br>
 Exemple:<br>
 &lt;table name="photowalls_walls" id="photowalls_walls"
@@ -117,7 +117,7 @@ class="adminTable" style="border:1px;"&gt;<br>
 </td>
 <td style="vertical-align: top;">Optionel</td>
 <td style="vertical-align: top;">Titre de la table
-placée sur la première ligne du tableau.<br>
+placÃ©e sur la premiÃ¨re ligne du tableau.<br>
 </td>
 </tr>
     <tr>
@@ -128,13 +128,13 @@ recorset<br>
       </td>
       <td style="vertical-align: top;">Optionel</td>
       <td style="vertical-align: top;">Ce parametre peut recevoir plusieurs types de d'objet:<br>
-Tableau de tableaux associatifs représentant un ensemble d'enregistrements<br>
-Résultat d'une requete SQL<br>
-Un chaine de caractère représentant une requête SQL<br>
-Ce parametre est optionel et les données peuvent être ajoutées avec les méthodes "addRow" et "setData"<br>
-Il est possible de passer en parametre le résultat d'une requetes SQL
+Tableau de tableaux associatifs reprÃ©sentant un ensemble d'enregistrements<br>
+RÃ©sultat d'une requete SQL<br>
+Un chaine de caractÃ¨re reprÃ©sentant une requÃªte SQL<br>
+Ce parametre est optionel et les donnÃ©es peuvent Ãªtre ajoutÃ©es avec les mÃ©thodes "addRow" et "setData"<br>
+Il est possible de passer en parametre le rÃ©sultat d'une requetes SQL
 puis d'ajouter les enregistrement d'un tableau si tant estqu'il est
-cohérance entre les donées.<br>
+cohÃ©rance entre les donÃ©es.<br>
       </td>
     </tr>
 <tr>
@@ -142,22 +142,22 @@ cohérance entre les donées.<br>
 <td style="vertical-align: top;">string<br>
 </td>
 <td style="vertical-align: top;">Optionel</td>
-<td style="vertical-align: top;">Classe à affecter au
-tableau, voir les class défini dans les feuille de style du tème de
+<td style="vertical-align: top;">Classe Ã  affecter au
+tableau, voir les class dÃ©fini dans les feuille de style du tÃ¨me de
 xoops.</td>
 </tr>
 <tr>
 <td style="vertical-align: top;">$style</td>
 <td style="vertical-align: top;">string</td>
 <td style="vertical-align: top;">Optionel</td>
-<td style="vertical-align: top;">Style CSS affecté à
+<td style="vertical-align: top;">Style CSS affectÃ© Ã 
 l'attribut "style" de la balise &lt;table&gt; du tableau</td>
 </tr>
 <tr>
 <td style="vertical-align: top;">$urlImg</td>
 <td style="vertical-align: top;">array</td>
 <td style="vertical-align: top;">Optionel</td>
-<td style="vertical-align: top;">URL du dossier des icones. Par défaut c'est le dossier:<br>
+<td style="vertical-align: top;">URL du dossier des icones. Par dÃ©faut c'est le dossier:<br>
 \Frameworks\moduleclasses\icons\20<br>
 </td>
 </tr>
@@ -170,7 +170,7 @@ l'attribut "style" de la balise &lt;table&gt; du tableau</td>
 <br>
 <br>
 <a href="table.html#mozTocId629007"><img src="images/home.gif" align="right"></a>
-<h1><a class="mozTocH1" name="mozTocId623962"></a>Propriétés</h1>
+<h1><a class="mozTocH1" name="mozTocId623962"></a>PropriÃ©tÃ©s</h1>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -181,11 +181,11 @@ l'attribut "style" de la balise &lt;table&gt; du tableau</td>
 </td>
 </tr>
 <tr>
-<td>Défini ou renvoi le tableu de titres des colonnes.<br>
+<td>DÃ©fini ou renvoi le tableu de titres des colonnes.<br>
 <span style="font-weight: bold;"></span></td>
 </tr>
 <tr>
-<td>Commentaires:<br>Egalement passé en paramètre dans le constructeur</td>
+<td>Commentaires:<br>Egalement passÃ© en paramÃ¨tre dans le constructeur</td>
 </tr>
 <tr>
 <td colspan="1" rowspan="3">getArrayData<br>setArrayData</td>
@@ -196,22 +196,22 @@ l'attribut "style" de la balise &lt;table&gt; du tableau</td>
 <td><br></td>
 </tr>
 <tr>
-<td>Tableau de données a afficher<br></td>
+<td>Tableau de donnÃ©es a afficher<br></td>
 </tr>
 <tr>
 <td colspan="1" rowspan="3">getQueryData<br>setQueryData</td>
 <td><br><span class="prototype">function <span style="font-weight: bold;">getQueryData</span>() </span><br><span class="prototype">function <span style="font-weight: bold;">setQueryData</span>($queryData)</span></td>
 </tr>
 <tr><td><br>
-</td></tr><tr><td>Requête SQL à afficher.</td></tr></tbody>
+</td></tr><tr><td>RequÃªte SQL Ã  afficher.</td></tr></tbody>
 </table>
 <br>
 <br>
 <a href="table.html#mozTocId629007"><img src="images/home.gif" align="right"></a>
-<h1><a class="mozTocH1" name="mozTocId623962"></a>Méthodes</h1><br>
-Le mêmes paramêtres sont pasés ont différentes functions de la classe.
-pour ne pas faire de répétion, les mêmes noms sont utilsés pour les
-mêmes paramètres. Ils sont décrit dans le tableau cidessous:<br>
+<h1><a class="mozTocH1" name="mozTocId623962"></a>MÃ©thodes</h1><br>
+Le mÃªmes paramÃªtres sont pasÃ©s ont diffÃ©rentes functions de la classe.
+pour ne pas faire de rÃ©pÃ©tion, les mÃªmes noms sont utilsÃ©s pour les
+mÃªmes paramÃ¨tres. Ils sont dÃ©crit dans le tableau cidessous:<br>
 <br>
 <table style="text-align: left; height: 50px;" border="1" cellpadding="2" cellspacing="2" width="20%">
 <tbody>
@@ -219,21 +219,21 @@ mêmes paramètres. Ils sont décrit dans le tableau cidessous:<br>
 <td>$key<br>
 $column<br>
 </td>
-<td>Clef utilisées dans tous les tableaux associatifs. Il judicieux d'utiliser le nom des champs de table.</td>
+<td>Clef utilisÃ©es dans tous les tableaux associatifs. Il judicieux d'utiliser le nom des champs de table.</td>
 </tr>
 <tr>
 <td>$link</td>
-<td>UL àdes liens. Elle peut contenir des éléments a remplacés selon lla ligne du tableau, coome l'ID de l'enregistrement.<br>Pour etre remplacé par leur valeurs correspondantes il faut entoutérer les paramètres par des accolade.<br>Les nms utilisés doivent correspondre au clef du tableau "titles" (nom des chmps)</td>
+<td>UL Ã des liens. Elle peut contenir des Ã©lÃ©ments a remplacÃ©s selon lla ligne du tableau, coome l'ID de l'enregistrement.<br>Pour etre remplacÃ© par leur valeurs correspondantes il faut entoutÃ©rer les paramÃ¨tres par des accolade.<br>Les nms utilisÃ©s doivent correspondre au clef du tableau "titles" (nom des chmps)</td>
 </tr>
-<tr><td>$op</td><td>Dans le lien permet de spécifier la valeur de l'attribut "_op_",.<br>exemple:<br>Exemple de paramètre passés à une&nbsp; fonctions:<br>$link = "http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op={_op_}&amp;idPhotoWalls=3&amp;name=Naissance"<br>$op='edit'<br>la chaine {_op_} (voir opAttributName) sera remplacé par la valeur "edit"<br>Résultat :<br>http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op=edit&amp;idPhotoWalls=3&amp;name=Naissance<br></td></tr><tr><td>$opAttributName</td><td>Expression remplacé dans les liens par la valeur de "$op";<br>Par défaut utiliser "_op_" pour ne pas avoir de conflit avec un champ de table nommé "op".</td></tr></tbody>
+<tr><td>$op</td><td>Dans le lien permet de spÃ©cifier la valeur de l'attribut "_op_",.<br>exemple:<br>Exemple de paramÃ¨tre passÃ©s Ã  une&nbsp; fonctions:<br>$link = "http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op={_op_}&amp;idPhotoWalls=3&amp;name=Naissance"<br>$op='edit'<br>la chaine {_op_} (voir opAttributName) sera remplacÃ© par la valeur "edit"<br>RÃ©sultat :<br>http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op=edit&amp;idPhotoWalls=3&amp;name=Naissance<br></td></tr><tr><td>$opAttributName</td><td>Expression remplacÃ© dans les liens par la valeur de "$op";<br>Par dÃ©faut utiliser "_op_" pour ne pas avoir de conflit avec un champ de table nommÃ© "op".</td></tr></tbody>
 </table>
 &nbsp;<br>
-<br>Exemple&nbsp;pour illustrer les paramètres $link, $op, $opKey;<br><br>
+<br>Exemple&nbsp;pour illustrer les paramÃ¨tres $link, $op, $opKey;<br><br>
 <div class="code">
-<pre class="brush: php;">    //Url du lien à associer au champ "name' du tableau<br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}";<br><br>    //appel de la fonction pour crrer un lien du champ "name"<br>    $t-&gt;addLink('name', $link, 'op='.'edit');</pre>
+<pre class="brush: php;">    //Url du lien Ã  associer au champ "name' du tableau<br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}";<br><br>    //appel de la fonction pour crrer un lien du champ "name"<br>    $t-&gt;addLink('name', $link, 'op='.'edit');</pre>
 </div><br>Les expression&nbsp;{idPhotoWalls} et {name} corespondent aux
-nom de champs et&nbsp; seront remplacés par les valeurs des
-enregistrements du tableau ou de la requête SQL.<br>L'expression {_op_} sera remplacer par <span style="font-family: monospace;">&nbsp;</span>'op=edit'<br>L'utilisation de {_op_} permet de défiri le lien une seule fois par exemple pour les actions "delete", "edit", ...<br>Résultat pour chaque ligne de l'exemple, lien sur la colonne "name" du tableau :<br><br>
+nom de champs et&nbsp; seront remplacÃ©s par les valeurs des
+enregistrements du tableau ou de la requÃªte SQL.<br>L'expression {_op_} sera remplacer par <span style="font-family: monospace;">&nbsp;</span>'op=edit'<br>L'utilisation de {_op_} permet de dÃ©firi le lien une seule fois par exemple pour les actions "delete", "edit", ...<br>RÃ©sultat pour chaque ligne de l'exemple, lien sur la colonne "name" du tableau :<br><br>
 <div class="code">
 <pre class="brush: php;">http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op=edit&amp;idPhotoWalls=2&amp;name=Mariage<br>http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op=edit&amp;idPhotoWalls=3&amp;name=Naissance<br>http://localhost:8101/x255fra/modules/photowalls/admin/walls.php?op=edit&amp;idPhotoWalls=1&amp;name=Photo%20Walls<br></pre>
 </div><br>
@@ -274,10 +274,10 @@ function setUrlImg($urlImg)<br>
 <span class="prototype"></span><span class="prototype"></span> <span class="prototype">function addColumn($key, $caption, $type, $options, $witdh=0, $align='', $style='')</span></td>
 </tr>
 <tr>
-<td>Paramètres:<br></td>
+<td>ParamÃ¨tres:<br></td>
 </tr>
 <tr>
-<td>Constantes a utilisée pour le paramètre "type":<br>
+<td>Constantes a utilisÃ©e pour le paramÃ¨tre "type":<br>
 const col_read = 'ro';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Lecture, Lien, +[hidden]<br>
 
 const col_hidden = 'ih';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Only hidden<br>
@@ -303,7 +303,7 @@ const col_expression = 'sf';&nbsp; // Implode of many fields like a sprintf func
 const col_matchIcon = 'mi';&nbsp;&nbsp; // Match field and icons + link<br>
 
 const col_spin = 'sb';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Spin button<br>
-Chaque cas est étudié dans le tableau onsacré aux exemples.<br>
+Chaque cas est Ã©tudiÃ© dans le tableau onsacrÃ© aux exemples.<br>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="3">addAction</td><td>function addAction($link, $icon, $title, $op='', $opAttributName='_op_')<br>
@@ -572,24 +572,24 @@ function addRow($row)</td>
 <tbody>
 <tr>
 <td colspan="1" rowspan="3">addAction</td>
-<td>Paramètres:<br>
+<td>ParamÃ¨tres:<br>
 <span class="prototype"></span><span class="prototype"></span> <span class="prototype">function
 <span style="font-weight: bold;">addAction</span>($key,
 $link, $icon, $title, $op='', $opAttributName='_op_')</span></td>
 </tr>
 <tr>
-<td>Paramètres:<br></td>
+<td>ParamÃ¨tres:<br></td>
 </tr>
 <tr>
 <td><br>
 </td>
 </tr>
-<tr><td colspan="1" rowspan="3">addField</td><td>Paramètres:<br><span class="prototype">function <span style="font-weight: bold;">addField</span>($key, $fieldName, $values)</span></td></tr><tr><td>$<span style="font-weight: bold;">Key</span> : Clef du tableau associatif<br>$<span style="font-weight: bold;">fieldName</span> : Nom du nouveau champ à ajouter<br>$<span style="font-weight: bold;">values</span>
-: Liste de valeur à remplacer dans le nouveau champ. Les clef de ce
+<tr><td colspan="1" rowspan="3">addField</td><td>ParamÃ¨tres:<br><span class="prototype">function <span style="font-weight: bold;">addField</span>($key, $fieldName, $values)</span></td></tr><tr><td>$<span style="font-weight: bold;">Key</span> : Clef du tableau associatif<br>$<span style="font-weight: bold;">fieldName</span> : Nom du nouveau champ Ã  ajouter<br>$<span style="font-weight: bold;">values</span>
+: Liste de valeur Ã  remplacer dans le nouveau champ. Les clef de ce
 tableau doivent correspndre au valeur possible du champ "$key"</td></tr><tr><td><br>
 </td></tr><tr>
 <td colspan="1" rowspan="3">addIcon</td>
-<td>Paramètres:<br>
+<td>ParamÃ¨tres:<br>
 <span class="prototype">function <span style="font-weight: bold;">addIcon</span>($key,
 $icons, $links, $titles,&nbsp;$op='', $opAttributName='_op_')</span></td>
 </tr>
@@ -602,7 +602,7 @@ $icons, $links, $titles,&nbsp;$op='', $opAttributName='_op_')</span></td>
 </tr>
 <tr>
 <td colspan="1" rowspan="3">addLink</td>
-<td>Paramètres:<br>
+<td>ParamÃ¨tres:<br>
 <span class="prototype">function <span style="font-weight: bold;">addLink</span>($key, $link,&nbsp;$op='', $opAttributName='_op_')</span></td>
 </tr>
 <tr>
@@ -621,18 +621,18 @@ $caption,&nbsp;$style='')</span></td>
 </tr>
 <tr><td><br>
 </td></tr><tr>
-<td>Paramètres:<br>
+<td>ParamÃ¨tres:<br>
 $<span style="font-weight: bold;">key</span> :
 clef du tableau assiciatif:<br>
 $<span style="font-weight: bold;">caption</span>
 : Titre de la colonne<br>
 $<span style="font-weight: bold;">style</span>
-: &nbsp;valeur de l'attribut style applliqué à la balise &lt;td
+: &nbsp;valeur de l'attribut style applliquÃ© Ã  la balise &lt;td
 style="style"&gt;</td>
 </tr>
 <tr>
-<td>pour les clés utiliser les noms de colonnes des
-requêtes SQL</td>
+<td>pour les clÃ©s utiliser les noms de colonnes des
+requÃªtes SQL</td>
 </tr>
 <tr>
 <td colspan="1" rowspan="3">render</td>
@@ -640,16 +640,16 @@ requêtes SQL</td>
 <span class="prototype">function <span style="font-weight: bold;">render</span>()</span></td>
 </tr>
 <tr>
-<td>Paramètres:<br></td>
+<td>ParamÃ¨tres:<br></td>
 </tr>
 <tr>
-<td>Renvoie le code HTML complet du tableau généré.</td>
+<td>Renvoie le code HTML complet du tableau gÃ©nÃ©rÃ©.</td>
 </tr>
-<tr><td colspan="1" rowspan="3">setArrayData</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setArrayData</span>($arrayData)</span></td></tr><tr><td>Paramètres:<br>$<span style="font-weight: bold;">arrayData</span> (array mixed array) : tableau d'enregistrement obtenu par exemple avec la fonctoin fetcharray<br></td></tr><tr><td>Seuls seront
-visibles les colonnes dont le nom du champ seront présent dans le
-tableau "titles"</td></tr><tr><td colspan="1" rowspan="3">setBackground</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setBackground</span>($evenBackground='CCC', $oddBackground='FFF')</span></td></tr><tr><td>Paramètres:<br>$<span style="font-weight: bold;">evenBackgroung</span> (string) : Couleur de fond des ligne paires<br>$<span style="font-weight: bold;">oddBackground</span> (string) : Couleur de fond des lignes impaires</td></tr><tr><td>Défini les couleur alternées des lignes du tableau.</td></tr><tr><td colspan="1" rowspan="3">setQueryData</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setQueryData</span>($queryData)</span></td></tr><tr><td>Paramètres:<br>$<span style="font-weight: bold;">queryData</span> (query) : résultat d'une requête à afficher.&nbsp;</td></tr><tr><td>Seuls seront
-visibles les colonnes dont le nom du champ seront présent dans le
-tableau "titles"</td></tr><tr><td colspan="1" rowspan="3">setTitles</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setTitles</span>($titles)</span></td></tr><tr><td>Paramètres:<br>$<span style="font-weight: bold;">titles</span>&nbsp;(array mixed array) : tableau de description des colonnes du tableau.</td></tr><tr><td><br>
+<tr><td colspan="1" rowspan="3">setArrayData</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setArrayData</span>($arrayData)</span></td></tr><tr><td>ParamÃ¨tres:<br>$<span style="font-weight: bold;">arrayData</span> (array mixed array) : tableau d'enregistrement obtenu par exemple avec la fonctoin fetcharray<br></td></tr><tr><td>Seuls seront
+visibles les colonnes dont le nom du champ seront prÃ©sent dans le
+tableau "titles"</td></tr><tr><td colspan="1" rowspan="3">setBackground</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setBackground</span>($evenBackground='CCC', $oddBackground='FFF')</span></td></tr><tr><td>ParamÃ¨tres:<br>$<span style="font-weight: bold;">evenBackgroung</span> (string) : Couleur de fond des ligne paires<br>$<span style="font-weight: bold;">oddBackground</span> (string) : Couleur de fond des lignes impaires</td></tr><tr><td>DÃ©fini les couleur alternÃ©es des lignes du tableau.</td></tr><tr><td colspan="1" rowspan="3">setQueryData</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setQueryData</span>($queryData)</span></td></tr><tr><td>ParamÃ¨tres:<br>$<span style="font-weight: bold;">queryData</span> (query) : rÃ©sultat d'une requÃªte Ã  afficher.&nbsp;</td></tr><tr><td>Seuls seront
+visibles les colonnes dont le nom du champ seront prÃ©sent dans le
+tableau "titles"</td></tr><tr><td colspan="1" rowspan="3">setTitles</td><td>Prototype:<br><span class="prototype">function <span style="font-weight: bold;">setTitles</span>($titles)</span></td></tr><tr><td>ParamÃ¨tres:<br>$<span style="font-weight: bold;">titles</span>&nbsp;(array mixed array) : tableau de description des colonnes du tableau.</td></tr><tr><td><br>
 </td></tr></tbody>
 </table>
 <br>
@@ -660,9 +660,9 @@ tableau "titles"</td></tr><tr><td colspan="1" rowspan="3">setTitles</td><td>Prot
 <br>
 <a href="table.html#mozTocId629007"><img src="images/home.gif" align="right"></a>
 <h1><a class="mozTocH1" name="mozTocId623962"></a>Description
-des tableaux utilisés dans la classe</h1>
+des tableaux utilisÃ©s dans la classe</h1>
 <big><big><span style="font-weight: bold;">Les
-exempls ci-dessous sont tirés du module "photowalls"</span></big></big><br>
+exempls ci-dessous sont tirÃ©s du module "photowalls"</span></big></big><br>
 <img style="width: 854px; height: 181px;" alt="" src="images/exemple-03.png"><br>
 <br>
 <br>
@@ -682,7 +682,7 @@ Affichage du contenu du tableau : <br>
 <br>
 <br>
 <br>
-<h2><a class="mozTocH2" name="mozTocId710024"></a>Actions : Tableaux des icones liés à des actions ou des
+<h2><a class="mozTocH2" name="mozTocId710024"></a>Actions : Tableaux des icones liÃ©s Ã  des actions ou des
 traitements</h2>
 Exemple de code<br>
 <div class="code">
@@ -693,10 +693,10 @@ Exemple de code<br>
 Affichage du contenu du tableau : <br>
 <br>
 <div class="code">
-<pre class="brush: php;"><code></code>Array<br>(<br> [actions] =&gt; Array<br> (<br> [0] =&gt; Array<br> (<br> [link] =&gt; permissions.php?op={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/verrou-red.gif<br> [title] =&gt; Permisions<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [1] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/edit.gif<br> [title] =&gt; Editer<br> [op] =&gt; op=edit<br> [opKey] =&gt; _op_<br> )<br><br> [2] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/duplicate.gif<br> [title] =&gt; Dupliquer<br> [op] =&gt; op=duplicate<br> [opKey] =&gt; _op_<br> )<br><br> [3] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/buildThumb.gif<br> [title] =&gt; Thumbs<br> [op] =&gt; op=buildThumbs<br> [opKey] =&gt; _op_<br> )<br><br> [4] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/watermarks.gif<br> [title] =&gt; WaterMarks<br> [op] =&gt; op=buildWaterMarks<br> [opKey] =&gt; _op_<br> )<br><br> [5] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/delete.gif<br> [title] =&gt; Effacer les images du mur<br> [op] =&gt; op=erase<br> [opKey] =&gt; _op_<br> )<br><br> [6] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/remove.gif<br> [title] =&gt; Supprimer le mur<br> [op] =&gt; op=remove<br> [opKey] =&gt; _op_<br> )<br><br> )<br><br> [zip] =&gt; Array<br> (<br> [0] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=thumbs<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; Générer l'archive du dossier des vignettes<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [1] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=original<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; Générer l'archive du dossier des photos<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [2] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=watermarks<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; Générer l'archive du dossier des photos marquées<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> )<br><br>)</pre>
+<pre class="brush: php;"><code></code>Array<br>(<br> [actions] =&gt; Array<br> (<br> [0] =&gt; Array<br> (<br> [link] =&gt; permissions.php?op={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/verrou-red.gif<br> [title] =&gt; Permisions<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [1] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/edit.gif<br> [title] =&gt; Editer<br> [op] =&gt; op=edit<br> [opKey] =&gt; _op_<br> )<br><br> [2] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/duplicate.gif<br> [title] =&gt; Dupliquer<br> [op] =&gt; op=duplicate<br> [opKey] =&gt; _op_<br> )<br><br> [3] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/buildThumb.gif<br> [title] =&gt; Thumbs<br> [op] =&gt; op=buildThumbs<br> [opKey] =&gt; _op_<br> )<br><br> [4] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/watermarks.gif<br> [title] =&gt; WaterMarks<br> [op] =&gt; op=buildWaterMarks<br> [opKey] =&gt; _op_<br> )<br><br> [5] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/delete.gif<br> [title] =&gt; Effacer les images du mur<br> [op] =&gt; op=erase<br> [opKey] =&gt; _op_<br> )<br><br> [6] =&gt; Array<br> (<br> [link] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/remove.gif<br> [title] =&gt; Supprimer le mur<br> [op] =&gt; op=remove<br> [opKey] =&gt; _op_<br> )<br><br> )<br><br> [zip] =&gt; Array<br> (<br> [0] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=thumbs<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; GÃ©nÃ©rer l'archive du dossier des vignettes<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [1] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=original<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; GÃ©nÃ©rer l'archive du dossier des photos<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> [2] =&gt; Array<br> (<br> [link] =&gt; zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=watermarks<br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; name<br> )<br><br> [icon] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/zip.gif<br> [title] =&gt; GÃ©nÃ©rer l'archive du dossier des photos marquÃ©es<br> [op] =&gt; <br> [opKey] =&gt; _op_<br> )<br><br> )<br><br>)</pre>
 </div>
 <br>
-<h2><a class="mozTocH2" name="mozTocId399023"></a>Icons:&nbsp;Tableaux icones affichés à la place du
+<h2><a class="mozTocH2" name="mozTocId399023"></a>Icons:&nbsp;Tableaux icones affichÃ©s Ã  la place du
 contenu des champs</h2>
 Exemple de code<br>
 <div class="code">
@@ -707,7 +707,7 @@ Exemple de code<br>
 Affichage du contenu du tableau : <br>
 <br>
 <div class="code">
-<pre class="brush: php;"><code></code>Array<br>(<br> [defaut] =&gt; Array<br> (<br> [icons] =&gt; Array<br> (<br> [0] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/punaise-white1.gif<br> [1] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/punaise-red2.gif<br> )<br><br> [links] =&gt; Array<br> (<br> [0] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> )<br><br> [titles] =&gt; Array<br> (<br> [0] =&gt; Définir par défaut<br> [1] =&gt; Defaut<br> )<br><br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; defaut<br> )<br><br> [op] =&gt; op=setDefaut2show<br> [opKey] =&gt; _op_<br> )<br><br> [actif] =&gt; Array<br> (<br> [icons] =&gt; Array<br> (<br> [0] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/interdit.gif<br> [1] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/smiley.gif<br> )<br><br> [links] =&gt; Array<br> (<br> [0] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> [1] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> )<br><br> [titles] =&gt; Array<br> (<br> [0] =&gt; Inactif<br> [1] =&gt; Actif<br> )<br><br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; defaut<br> )<br><br> [op] =&gt; op=setDefaut2show<br> [opKey] =&gt; _op_<br> )<br><br>)</pre>
+<pre class="brush: php;"><code></code>Array<br>(<br> [defaut] =&gt; Array<br> (<br> [icons] =&gt; Array<br> (<br> [0] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/punaise-white1.gif<br> [1] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/punaise-red2.gif<br> )<br><br> [links] =&gt; Array<br> (<br> [0] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> )<br><br> [titles] =&gt; Array<br> (<br> [0] =&gt; DÃ©finir par dÃ©faut<br> [1] =&gt; Defaut<br> )<br><br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; defaut<br> )<br><br> [op] =&gt; op=setDefaut2show<br> [opKey] =&gt; _op_<br> )<br><br> [actif] =&gt; Array<br> (<br> [icons] =&gt; Array<br> (<br> [0] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/interdit.gif<br> [1] =&gt; http://localhost:8101/x255fra/Frameworks/moduleclasses/icons/20/smiley.gif<br> )<br><br> [links] =&gt; Array<br> (<br> [0] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> [1] =&gt; walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;index={defaut}<br> )<br><br> [titles] =&gt; Array<br> (<br> [0] =&gt; Inactif<br> [1] =&gt; Actif<br> )<br><br> [keys] =&gt; Array<br> (<br> [0] =&gt; idPhotoWalls<br> [1] =&gt; defaut<br> )<br><br> [op] =&gt; op=setDefaut2show<br> [opKey] =&gt; _op_<br> )<br><br>)</pre>
 </div>
 <br>
 <br>
@@ -729,10 +729,10 @@ Affichage du contenu du tableau : <br>
 <br>
 <br>
 <a href="table.html#mozTocId629007"><img src="images/home.gif" align="right"></a>
-<h1><a class="mozTocH1" name="mozTocId623962"></a>Exemple complet tiré de la dernière version du module "photowalls"</h1><br>
+<h1><a class="mozTocH1" name="mozTocId623962"></a>Exemple complet tirÃ© de la derniÃ¨re version du module "photowalls"</h1><br>
 <br>
 <div class="code">
-<pre class="brush: php;"><code></code>    $t = new XoopsFormAdminTable("photowalls_walls", "walls");<br>    <br>    //affectaion des couleurs de fond alternéees des lignes du tableau<br>    $t-&gt;setbackground('C8BFE7','FFAECE');<br>    <br>    //Champ de la requete a afficher<br>    $t-&gt;addTitle('idPhotoWalls', _AM_JJD_ID, 'align="center"');<br>    $t-&gt;addTitle('name', _AM_JJD_NAME);<br>    $t-&gt;addTitle('folder', _AM_WAL_FOLDER);<br>    $t-&gt;addTitle('nbVignettes', _AM_WAL_NB_VIGNETTES, 'align="center"');<br>    <br>    $t-&gt;addTitle('ordre', _AM_WAL_ORDRE, 'align="center"');<br>    $t-&gt;addTitle('defaut', _AM_WAL_DEFAUT, 'align="center"');<br>    $t-&gt;addTitle('actif', _AM_JJD_ACTIF, 'align="center"');<br>    $t-&gt;addTitle('nbPhotos_sur_max', _AM_WAL_NB_PHOTOS, 'align="center"');<br>    <br>    //Colonnes des traitements<br>    $t-&gt;addTitle('zip', _AM_JJD_ZIP_FOLDERS, 'align="center"');<br>    $t-&gt;addTitle('actions', _AM_JJD_ACTIONS, 'align="center"');<br>    <br>    //--------------------------------------------------------    <br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;name={name}";<br>    $t-&gt;addLink('name', $link, 'op='.'edit');<br>    //--------------------------------------------------------    <br>    <br>    $linkRight = "permissions.php?op={idPhotoWalls}";<br>    $t-&gt;addAction('actions', $linkRight,  <br>                  XMA_URL .'/icons/20/verrou-red.gif', _AM_JJD_RIGHT);<br>    <br>    $t-&gt;addAction('actions', $link,  <br>                  XMA_URL .'/icons/20/edit.gif', _AM_JJD_EDIT, 'op='.'edit');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/duplicate.gif', _AM_JJD_CLONE, 'op='.'duplicate');<br>    <br>    $t-&gt;addAction('actions', $link,  <br>                  XMA_URL .'/icons/20/buildThumb.gif', _AM_WAL_THUMBS, 'op='.'buildThumbs');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/watermarks.gif', _AM_WAL_WATERMARKS, 'op='.'buildWaterMarks');<br>    //---------------------------------------------------------------------<br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=thumbs" ;<br>    $t-&gt;addAction('zip', $linkZip,  <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_THUMBS);<br>    <br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=original";<br>    $t-&gt;addAction('zip', $linkZip, <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_ORIGINAL);<br><br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=watermarks";<br>    $t-&gt;addAction('zip', $linkZip,  <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_WATERMARKS);<br>    //---------------------------------------------------------------------<br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/delete.gif', _AM_WAL_PURGE_WALL, 'op='.'erase');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/remove.gif', _AM_WAL_DELETE_WALL, 'op='.'remove');<br>                  <br>     //-----------------------------------------------------------------------<br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;defaut={defaut}";<br>    $t-&gt;addicon('defaut', array(XMA_URL .'/icons/20/punaise-white1.gif',XMA_URL .'/icons/20/punaise-red2.gif'),<br>                array('0'=&gt;$link),<br>                array('0'=&gt;_AM_WAL_SETDEFAUT,'1'=&gt;_AM_WAL_DEFAUT),<br>                'op='.'setDefaut2show');<br>                <br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;actif={actif}";<br>    $t-&gt;addicon('actif', <br>                array(XMA_URL .'/icons/20/interdit.gif',XMA_URL .'/icons/20/smiley.gif'),<br>                array('0'=&gt;$link, '1'=&gt;$link),<br>                array('0'=&gt;'Inactif','1'=&gt;'Actif'),<br>                'op='.'setDefaut2show');<br>    //-----------------------------------------------------------------------<br>    $handler =&amp; xoops_gethandler('walls_photowalls');<br>    $ws = pw_getAllWallInfo();<br>    //echoArray($ws);<br>    $t-&gt;setArrayData ($ws);<br>    //-----------------------------------------------------------------------<br>    echo $t-&gt;render();<br></pre>
+<pre class="brush: php;"><code></code>    $t = new XoopsFormAdminTable("photowalls_walls", "walls");<br>    <br>    //affectaion des couleurs de fond alternÃ©ees des lignes du tableau<br>    $t-&gt;setbackground('C8BFE7','FFAECE');<br>    <br>    //Champ de la requete a afficher<br>    $t-&gt;addTitle('idPhotoWalls', _AM_JJD_ID, 'align="center"');<br>    $t-&gt;addTitle('name', _AM_JJD_NAME);<br>    $t-&gt;addTitle('folder', _AM_WAL_FOLDER);<br>    $t-&gt;addTitle('nbVignettes', _AM_WAL_NB_VIGNETTES, 'align="center"');<br>    <br>    $t-&gt;addTitle('ordre', _AM_WAL_ORDRE, 'align="center"');<br>    $t-&gt;addTitle('defaut', _AM_WAL_DEFAUT, 'align="center"');<br>    $t-&gt;addTitle('actif', _AM_JJD_ACTIF, 'align="center"');<br>    $t-&gt;addTitle('nbPhotos_sur_max', _AM_WAL_NB_PHOTOS, 'align="center"');<br>    <br>    //Colonnes des traitements<br>    $t-&gt;addTitle('zip', _AM_JJD_ZIP_FOLDERS, 'align="center"');<br>    $t-&gt;addTitle('actions', _AM_JJD_ACTIONS, 'align="center"');<br>    <br>    //--------------------------------------------------------    <br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;name={name}";<br>    $t-&gt;addLink('name', $link, 'op='.'edit');<br>    //--------------------------------------------------------    <br>    <br>    $linkRight = "permissions.php?op={idPhotoWalls}";<br>    $t-&gt;addAction('actions', $linkRight,  <br>                  XMA_URL .'/icons/20/verrou-red.gif', _AM_JJD_RIGHT);<br>    <br>    $t-&gt;addAction('actions', $link,  <br>                  XMA_URL .'/icons/20/edit.gif', _AM_JJD_EDIT, 'op='.'edit');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/duplicate.gif', _AM_JJD_CLONE, 'op='.'duplicate');<br>    <br>    $t-&gt;addAction('actions', $link,  <br>                  XMA_URL .'/icons/20/buildThumb.gif', _AM_WAL_THUMBS, 'op='.'buildThumbs');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/watermarks.gif', _AM_WAL_WATERMARKS, 'op='.'buildWaterMarks');<br>    //---------------------------------------------------------------------<br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=thumbs" ;<br>    $t-&gt;addAction('zip', $linkZip,  <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_THUMBS);<br>    <br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=original";<br>    $t-&gt;addAction('zip', $linkZip, <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_ORIGINAL);<br><br>    $linkZip = "zip.php?op=zip&amp;idPhotoWalls={idPhotoWalls}&amp;subfolder=watermarks";<br>    $t-&gt;addAction('zip', $linkZip,  <br>                  XMA_URL .'/icons/20/zip.gif', _AM_WAL_ZIP_FOLDER_WATERMARKS);<br>    //---------------------------------------------------------------------<br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/delete.gif', _AM_WAL_PURGE_WALL, 'op='.'erase');<br>    <br>    $t-&gt;addAction('actions', $link, <br>                  XMA_URL .'/icons/20/remove.gif', _AM_WAL_DELETE_WALL, 'op='.'remove');<br>                  <br>     //-----------------------------------------------------------------------<br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;defaut={defaut}";<br>    $t-&gt;addicon('defaut', array(XMA_URL .'/icons/20/punaise-white1.gif',XMA_URL .'/icons/20/punaise-red2.gif'),<br>                array('0'=&gt;$link),<br>                array('0'=&gt;_AM_WAL_SETDEFAUT,'1'=&gt;_AM_WAL_DEFAUT),<br>                'op='.'setDefaut2show');<br>                <br>    $link = "walls.php?{_op_}&amp;idPhotoWalls={idPhotoWalls}&amp;actif={actif}";<br>    $t-&gt;addicon('actif', <br>                array(XMA_URL .'/icons/20/interdit.gif',XMA_URL .'/icons/20/smiley.gif'),<br>                array('0'=&gt;$link, '1'=&gt;$link),<br>                array('0'=&gt;'Inactif','1'=&gt;'Actif'),<br>                'op='.'setDefaut2show');<br>    //-----------------------------------------------------------------------<br>    $handler =&amp; xoops_gethandler('walls_photowalls');<br>    $ws = pw_getAllWallInfo();<br>    //echoArray($ws);<br>    $t-&gt;setArrayData ($ws);<br>    //-----------------------------------------------------------------------<br>    echo $t-&gt;render();<br></pre>
 </div>
 <br><br>
 <br>
