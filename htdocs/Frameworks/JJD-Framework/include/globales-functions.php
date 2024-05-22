@@ -10,6 +10,7 @@
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
+if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
 
 /*******************************************************
  *

@@ -39,9 +39,8 @@ namespace JJD;
 //echo "<hr>JJD-FRamework is charged<hr>";
 
 
-define('JJD_FW', basename(dirname(__FILE__)));
-echo "<hr>" . JJD_FW . "<hr>";exit;
-define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . JJD_FW);
+include_once ("include/constantes.php");
+if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
 
 global $xoopsConfig;
 //---------------------------------------------------------------------
@@ -49,7 +48,6 @@ global $xoopsConfig;
 /*********************************************************************
  *                  functions du back office
  * *******************************************************************/
-include_once ("include/constantes.php");
 include_once (JJD_PATH . "/include/globales-functions.php");
 include_once (JJD_PATH . "/include/fw-functions.php");
 include_once (JJD_PATH . "/include/fso.php");

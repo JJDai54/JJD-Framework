@@ -1265,24 +1265,23 @@ JJD-Framework
 5=language\french\common.php
 6=language\french\admin.php
 7=include\fso.php
-8=Nouveau1.php
 [Selected Project Files]
 Main=
-Selected=Nouveau1.php
+Selected=include\fso.php
 [include\globales-functions.php]
 TopLine=11
-Caret=20,52
+Caret=4,52
 [include\fw-functions.php]
 TopLine=362
 Caret=47,372
 [load.php]
-TopLine=29
+TopLine=21
 Caret=1,70
 [include\xform-functions.php]
 TopLine=119
 Caret=9,160
 [back_office.php]
-TopLine=70
+TopLine=64
 Caret=1,111
 [language\french\common.php]
 TopLine=1
@@ -1293,6 +1292,3 @@ Caret=1,16
 [include\fso.php]
 TopLine=187
 Caret=21,226
-[Nouveau1.php]
-TopLine=1
-Caret=37,2

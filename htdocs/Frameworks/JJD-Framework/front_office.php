@@ -36,22 +36,6 @@ namespace JJD;
 //
 // $Id: .php,v 1.2 2004/09/18 19:25:55 dawilby Exp $
 
-//echo "<hr>JJD-FRamework is charged<hr>";
-
-define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . basename(dirname(__FILE__)));
-define('JJD_PATH_XFORMS', JJD_PATH . '/class/xoopsform');
-define('JJD_PATH_CSS', JJD_PATH . '/css');
-//echo"<hr>JJD_PATH => " . JJD_PATH . "<br>JJD_PATH_XFORMS => " . JJD_PATH_XFORMS . "<hr>";
-
-define('JJD_URL', XOOPS_URL . '/Frameworks' . dirname(__FILE__));
-define('JJD_ICO16', JJD_URL . "/images/icons/16");
-define('JJD_ICO32', JJD_URL . "/images/icons/32");
-
-
-//echo __FILE__."<hr>";
-define  ("XOOPS_JJD_PATH", XOOPS_ROOT_PATH ."/modules/jjd_tools/_xoops_plus");
-define  ("XOOPS_JJD_URL", XOOPS_URL . "/modules/jjd_tools/_xoops_plus");
-
 
 global $xoopsConfig;
 //---------------------------------------------------------------------
@@ -60,7 +44,9 @@ global $xoopsConfig;
 /*********************************************************************
  *                  functions du back office
  * *******************************************************************/
-include_once (JJD_PATH . "/include/constantes.php");
+include_once ("/include/constantes.php");
+if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
+
 include_once (JJD_PATH . "/include/globales-functions.php");
 include_once (JJD_PATH . "/include/fw-functions.php");
 include_once (JJD_PATH . "/include/fso.php");
