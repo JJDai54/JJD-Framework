@@ -24,8 +24,8 @@ _JJD-Framework
 			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\license.txt
 			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\readme.txt
 			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\todo.txt
-		-class
-			+xoopsform
+		+class
+			-xoopsform
 				-admintable
 					-doc
 						-images
@@ -1227,14 +1227,16 @@ _JJD-Framework
 11=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\todo.txt
 12=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\changelog.txt
 13=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt
+14=include\date-functions.php
+15=include\language-functions.php
 [Selected Project Files]
 Main=
-Selected=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt
+Selected=back_office.php
 [include\globales-functions.php]
 TopLine=1
 Caret=1,13
 [load.php]
-TopLine=17
+TopLine=1
 Caret=16,37
 [include\constantes.php]
 TopLine=1
@@ -1243,11 +1245,11 @@ Caret=37,12
 TopLine=22
 Caret=1,49
 [back_office.php]
-TopLine=32
-Caret=1,49
+TopLine=35
+Caret=1,54
 [class\About.php]
-TopLine=1
-Caret=16,21
+TopLine=139
+Caret=37,171
 [language\english\admin.php]
 TopLine=1
 Caret=46,15
@@ -1268,7 +1270,13 @@ TopLine=1
 Caret=1,1
 [J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\changelog.txt]
 TopLine=1
-Caret=35,2
+Caret=1,7
 [J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt]
 TopLine=1
 Caret=67,3
+[include\date-functions.php]
+TopLine=1
+Caret=1,2
+[include\language-functions.php]
+TopLine=38
+Caret=10,43
