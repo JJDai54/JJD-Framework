@@ -18,6 +18,12 @@ Extensions=*.*
 [Project tree]
 _JJD-Framework
 	+JJD-Framework
+		+docs
+			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\changelog.txt
+			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt
+			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\license.txt
+			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\readme.txt
+			J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\todo.txt
 		-class
 			+xoopsform
 				-admintable
@@ -1212,21 +1218,57 @@ _JJD-Framework
 2=include\constantes.php
 3=front_office.php
 4=back_office.php
+5=class\About.php
+6=language\english\admin.php
+7=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\index.html
+8=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\install.txt
+9=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\license.txt
+10=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\readme.txt
+11=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\todo.txt
+12=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\changelog.txt
+13=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt
 [Selected Project Files]
 Main=
-Selected=back_office.php
+Selected=J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt
 [include\globales-functions.php]
 TopLine=1
 Caret=1,13
 [load.php]
 TopLine=17
-Caret=1,44
+Caret=16,37
 [include\constantes.php]
 TopLine=1
-Caret=1,13
+Caret=37,12
 [front_office.php]
 TopLine=22
 Caret=1,49
 [back_office.php]
 TopLine=32
 Caret=1,49
+[class\About.php]
+TopLine=1
+Caret=16,21
+[language\english\admin.php]
+TopLine=1
+Caret=46,15
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\index.html]
+TopLine=1
+Caret=1,1
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\install.txt]
+TopLine=1
+Caret=1,3
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\license.txt]
+TopLine=1
+Caret=1,1
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\readme.txt]
+TopLine=1
+Caret=98,3
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\todo.txt]
+TopLine=1
+Caret=1,1
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\changelog.txt]
+TopLine=1
+Caret=35,2
+[J:\Xoops\_JJD\modules-JJD\JJD-Framework\projet\htdocs\JJD-Framework\docs\credits.txt]
+TopLine=1
+Caret=67,3

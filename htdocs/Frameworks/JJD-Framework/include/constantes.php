@@ -9,10 +9,10 @@
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
+define('JJD_VERSION', "3.04 beta 1");
+
 define('JJD_DEBUG', false);
 if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
-
-define('JJD_VERSION', 3.02);
 
 define('JJD_FW', basename(dirname(dirname(__FILE__))));
 define('JJD_PATH', XOOPS_ROOT_PATH . '/Frameworks/' . JJD_FW);

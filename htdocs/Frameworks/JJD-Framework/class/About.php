@@ -6,13 +6,19 @@ class About
     var $helper = null;
     var $module = null;
     var $dirname = null;
+	var $_codePaypal = null;
+    var $_btnImg     = null;
+    var $_pixelImg   = null;
 
-	public function __construct($helper)
+	public function __construct($helper, $codePaypal = null, $btnImg=null, $pixelImg=null)
 	{
         $this->helper = $helper;
         $this->module = $helper->getModule();
         $this->dirname = $this->module->getInfo('dirname');
         
+        $this->_codePaypal = $codePaypal;
+        $this->_btnImg     = $btnImg;
+        $this->_pixelImg   =$pixelImg;
         //xoops_loadLanguage('admin', $moduleDirName);
         
         
@@ -216,8 +222,31 @@ ___contribution___;
 */
 }
 
+function getBox(){
+
+
+  $box = array();
+  /* ------------------------- PAYPAL -----------------------------*/
+
+  $box['module']['legend'] = _AM_MODULEADMIN_ABOUT_MODULEINFO;
+  $box['module']['content'] = $this->htmlTableInfo();
+
+  /* ------------------------- Module -----------------------------*/
+  $box['paypal']['legend'] = _AM_JJD_ABOUT_CONTRIBUTION;
+  $box['paypal']['content'] = $this->contribution($this->_codePaypal, $this->_btnImg , $this->_pixelImg);
+
+  /* ------------------------- Header Info -----------------------------*/
+  $box['header']['legend'] = "header";
+  $box['header']['content'] = $this->localHeaderInfo();
+
+  /* ------------------------- Chanlog -----------------------------*/
+  $box['changelog']['legend'] = _AM_MODULEADMIN_ABOUT_CHANGELOG;
+  $box['changelog']['content'] = $this->changelog();
+    
+  /* ------------------------- retour -----------------------------*/
+    return $box;
 }
 
-
+} // ----------- Fin de la Classe ----------------------
 
 ?>
