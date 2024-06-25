@@ -16,6 +16,9 @@ if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
  *
  *******************************************************/
 function echoArray($t, $title='', $bExit = false){
+    
+  if(is_string($t)) return echoGPF($arr = 'GPF', $title = '',  $bolExit = false);
+  
   $tr = print_r($t,true);
   if ($title==''){
     echo "<code><pre>{$tr}</pre></code><hr>";
@@ -30,6 +33,22 @@ function echoArray($t, $title='', $bExit = false){
  *******************************************************/
 function displayArray($t, $title = "", $bExit = false){
   echoArray($t, $title,$bExit);  
+}
+
+/**
+*
+**/
+function echoGPF($arr = 'GPF' ,$title = '',  $bolExit = false)
+{
+   $arr = strtoupper($arr);
+   echo "<hr>";
+   if ($title) echo "message : {$title}<br>";
+   if (strPos($arr,'G') !== false) echo "_GET   : <pre>" . print_r($_GET, true)   . "</pre><hr>";
+   if (strPos($arr,'P') !== false) echo "_POST  : <pre>" . print_r($_POST, true)  . "</pre><hr>";
+   if (strPos($arr,'F') !== false) echo "_FILES : <pre>" . print_r($_FILES, true) . "</pre><hr>";
+
+   if($bolExit) exit($title);
+   return true;
 }
 
 
@@ -93,6 +112,26 @@ global $xoTheme;
 }
 
 
+/***************************************************************************
+renvoi la liste des colonnes d'un tables en excluant certains champ
+****************************************************************************/
+function getColoumnsFromTable($name, $strFldExclude = '', $asArray = false){
+global $xoopsDB;
+
+    $arrExclus = explode(',', $strFldExclude);
+    $sql = 'SHOW COLUMNS FROM '. $xoopsDB->prefix($name) . ';';
+    $rst = $xoopsDB->query($sql);
+    $fldArr = array();
+    while ($row = $xoopsDB->fetchArray($rst)){
+    //echoArray($row);
+        if(!in_array($row['Field'], $arrExclus)) $fldArr[] = $row['Field'];
+    } 
+    if($asArray){
+        return $fldArr;
+    }else{
+        return implode(',', $fldArr);
+    }
+}
 
 
 ?>

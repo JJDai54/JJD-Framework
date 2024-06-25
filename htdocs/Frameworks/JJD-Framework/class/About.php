@@ -141,6 +141,7 @@ function changelog(){
             $ret = implode( '<br>', file( $file ) ) . "\n";
         }
     }
+    $ret  = str_replace(" ","&nbsp;", $ret);
     //--------------------------------------------
     $html = array();
 

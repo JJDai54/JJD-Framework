@@ -171,7 +171,7 @@ function zipSimpleDir($sourcePath, $zipFilename){
     
     // Zip archive will be created only after closing object
     $zip->close();
-//exit;
+
 }
 
 //pour compatibilite
@@ -250,36 +250,6 @@ function unZipFile($fullName, $destPath){
 }
 
 /****************************************************************************
-// copie le contenu du repertoire $orig vers le repertoire $dest en le créant 
-// copie tous les sous-reps de manière récursive 
-// sous-entend qu'on a les droits d'écriture, bien sûr! 
- ****************************************************************************/
-// function CopyRep ($orig,$dest) { return CopieRep ($orig,$dest);}
-// function CopieRep ($orig,$dest) { 
-//    
-//   if (!is_dir($dest)) mkdir ($dest,0777); // à modifier si le rep cible existe déjà
-//   $dir = dir($orig); 
-//   while ($entry=$dir->read()) { 
-//     $pathOrig = "$orig/$entry"; 
-//     $pathDest = "$dest/$entry"; 
-//     // repertoire ->copie récursive
-//     if (is_dir($pathOrig) and (substr($entry,0,1)<>'.')) CopieRep ($pathOrig,$pathDest);     
-//    // fichier -> copie simple
-//    if (is_file($pathOrig) and ($pathDest<>'') and ($fp=fopen($pathOrig,'rb'))) { 
-//       $buf = fread($fp,filesize($pathOrig)); 
-//       $cop = fopen($pathDest,'ab+'); 
-//       fputs ($cop,$buf); 
-//       fclose ($cop); 
-//       fclose ($fp); 
-//     } 
-//   } 
-//   $dir->close(); 
-// }   
-
-
-
-
-/****************************************************************************
  * 
  ****************************************************************************/
 function include_highslide($options = null, $moduleDirName = ''){
@@ -347,7 +317,7 @@ function array2js($name, $options, $isNew = false, $boInsertInFlux = false){
 }
 /****************************************************************************
 Genere les parametres d'une URL
-$name : nom du ta&bleau associatif (cle=name / value)
+$name : nom du tableau associatif (cle=name / value)
 $addPrefix : caractere "?" ou "&" ajouter en premier
 retour : string liste des parameres pu l'url
  ****************************************************************************/

@@ -22,7 +22,7 @@ defined('XOOPS_ROOT_PATH') or die('Restricted access');
 
 xoops_load('XoopsFormElement');
 
-class XoopsFormCheckBoxAll extends XoopsFormCheckBox
+class XoopsFormCheckboxAll extends XoopsFormCheckBox
 {
 
     /**
@@ -31,15 +31,15 @@ class XoopsFormCheckBoxAll extends XoopsFormCheckBox
      * @var string
      * @access public
      */
-    var $_OptionCheckAllcaption = 'All';
-    
+    var $_checkboxAllCaption = 'All';
+
     /**
      * position for otpion checkAll
      *
      * @var int
      * @access public
      */
-    var $_OptionCheckAllPos = 0;
+    var $_checkboxAllPos = 0;
     
     /**
      * value default (checked)
@@ -47,19 +47,59 @@ class XoopsFormCheckBoxAll extends XoopsFormCheckBox
      * @var bool
      * @access public
      */
-    var $_OptionCheckAllDefault = flse;
+    var $_checkboxAllChecked = '';
 
+    /**
+     * value default ('')
+     *
+     * @var string : couleur de la police pour l'option All
+     * @access public
+     */
+    //var $_checkboxAllDefault = '';
+
+    var $_checkboxAllColor = false;
+
+    var $_checkboxAllId = '';
+    var $_checkboxAllName = '';
+     
+     //constructeur : 
+     //public function __construct($caption, $name, $value = null, $delimeter = '&nbsp;')  
+       
     /**
      * Add an option to check all checkbox
      *
      * @param string $caption
      * @param string $pos (-1: in first, 0: none, 1:in last)
+     * 
+     * doit etre appeler juste après le nes, avant le addOptionArray et le addOption
      */
-    function addOptionCheckAll($caption = '', $pos=1, $checked=false)
+    function addOptionChecboxkAll($value, $name = '', $pos=-1, $checked=false, $color='')
     {
-        $this->_OptionCheckAllPos = $pos;
-        $this->_OptionCheckAllCaption = $caption;    
-        $this->_OptionCheckAllDefault = $checked;    
+        $this->_checkboxAllPos = $pos;
+        $this->_checkboxAllName = $name;    
+        $this->_checkboxAllChecked = ($checked) ? 'checked' : '';    
+        $this->_checkboxAllColor = $color;
+        $this->_checkboxAllId = ($value) ? $value : $this->getName() . '_chkAll_' . rand(1,999999) ;
+        return $this->_checkboxAllId;
+                
+    }           
+    /**
+     * Add an option to check all checkbox
+     *
+     * @param string $caption
+     * @param string $pos (-1: in first, 0: none, 1:in last)
+     * 
+     *  ===== obsolete =====
+     */
+    function addOptionCheckAll($name = '', $pos=-1, $checked=false, $color='')
+    {
+ 
+        return $this->addOptionChecboxkAll(null, $name, $pos, $checked, $color);
+    }
+    
+    function setColorCheckAll($color='')
+    {
+        $this->_checkboxAllColor = $color;    
     }
     
     /**
@@ -70,7 +110,7 @@ class XoopsFormCheckBoxAll extends XoopsFormCheckBox
      */
 /*
 */      
-    function getCheckAll($idBidon)
+    function getCheckAll($checkboxAllId)
     {
       $ele_id = substr($this->getName(),0,-2);
       $ele_options = $this->getOptions();
@@ -84,16 +124,10 @@ class XoopsFormCheckBoxAll extends XoopsFormCheckBox
       $ids = implode(',', $t);
       
       $event = "onclick=\""
-             . "var optionids = new Array({$ids});"
-             . "xoopsCheckAllElements(optionids, '{$idBidon}');\" "; 
-      
+             . "var optionids = [{$ids}];"
+             . "xoopsCheckAllElements(optionids, '{$checkboxAllId}');\" "; 
       return $event;
     }
-    
-    
-    
-    
-    
     
     /**
      * prepare HTML for output
@@ -102,60 +136,41 @@ class XoopsFormCheckBoxAll extends XoopsFormCheckBox
      */
     function render()
     {
+        if($this->_checkboxAllChecked == 'checked') $this->setValue(array_keys($this->getOptions()));
+        $ret = parent::render();
+        //return parent::render();
         //--- JJD
-        $idBidon = 'chkAll_' . rand(1,999999) ;
+        if(count($this->getOptions()) > 1){
+            $checkboxAllId = $this->_checkboxAllId;
+            $event = $this->getcheckAll($checkboxAllId);
+            $caption = ($this->_checkboxAllColor) ? "<span style='color:{$this->_checkboxAllColor};'>{$this->_checkboxAllName}</span>"  : $this->_checkboxAllName;
+            $chkAll = "<input type='checkbox' name='{$checkboxAllId}' id='{$checkboxAllId}'{$this->_checkboxAllChecked}"
+                    . " title='' value='1' {$event} /><label for='{$checkboxAllId}'>{$caption}</label>";        
+        }else{
+            $chkAll = "";        
+        }
         
-        switch ($this->_OptionCheckAllPos){
+        //$caption = $this->_checkboxAllName;
+        switch ($this->_checkboxAllPos){
           case 1:
             //Ajout de l'option 'tout' en fin de liste
-            $this->addOption($idBidon, $this->_OptionCheckAllCaption);
-            $addCheckAll = true;
+            $ret =  $ret . $this->_delimeter . $chkAll;
             break;
 
           case -1:
             //Ajout de l'option 'tout' en début de liste
-            $t = array ($idBidon => $this->_OptionCheckAllCaption);
-            $this->_options = array_merge ($t ,$this->_options);
-            $addCheckAll = true;
+            $ret = $chkAll . $this->_delimeter . $ret;
             break;
 
           default:
-            $addCheckAll = false;
+
+            //$ret =  XoopsFormCheckBox::render() ;
             break;
         }  
-        
-        //recupe de chaine html
-        $ret = XoopsFormCheckBox::render();
-        
-        if ($addCheckAll){
-          //generation de l'evenement onclick a ajouter a idBidon
-          $event = $this->getcheckAll($idBidon);
-          $checked = (($this->_OptionCheckAllDefault) ? 'checked' : '');
-          //recherche de la position de la checkbox "tout" grace = idBidon    
-          $h = strpos($ret, $idBidon);
-          $i = strpos($ret, '>', $h);
-          //$j = strpos($ret, '<', $h);
-          $j=0;
-          $k=-1;
-          while (true){
-            $j = $k;
-            $k = strpos($ret, '<', $k+1);
-            if ($k > $i || $k === false) break;
-          }
-          
-          //construction de la nouvelle checkBox
-          $chkAll = "<input type='checkbox' name='{$idBidon}' id='{$idBidon}' "
-                  . "title='' {$checked} value='' {$event} />";        
-          
-          //reconstruction du rendu
-          $ret = substr($ret,0, $j)
-               . $chkAll
-               . substr($ret, $i+1);
-        }
-             
-        
+
         return $ret;
     }
+    
     
 
 }
