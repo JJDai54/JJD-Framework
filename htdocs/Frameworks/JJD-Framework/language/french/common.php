@@ -22,7 +22,7 @@
 \define('_CO_JJD_BLOCK_TITLE', "Titre du block");
 \define('_CO_JJD_BLOCK_DESC', "Description du block");
 
-
+\define('_CO_JJD_NO_PERM2', "Vous n'avez pas les permissions pour accéder à cette fonctionalité !<br>mod : %s : Permission=%s ===> %s=%s");
 	
 
 	

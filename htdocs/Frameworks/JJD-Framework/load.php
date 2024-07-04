@@ -59,6 +59,7 @@ include_once (JJD_PATH . "/include/language-functions.php");
  *                  classe du back office
  * *******************************************************************/
 include_once (JJD_PATH . "/class/About.php");
+include_once (JJD_PATH . "/class/permissions.php");
 
 /*********************************************************************
  *                  fichiers de langues

@@ -17,7 +17,7 @@ if (JJD_DEBUG) echo "<hr>========= " . __FILE__. " =================<hr>";
  *******************************************************/
 function echoArray($t, $title='', $bExit = false){
     
-  if(is_string($t)) return echoGPF($arr = 'GPF', $title = '',  $bolExit = false);
+  if(is_string($t)) return echoGPF($t, $title,  $bolExit = false);
   
   $tr = print_r($t,true);
   if ($title==''){
@@ -132,6 +132,8 @@ global $xoopsDB;
         return implode(',', $fldArr);
     }
 }
+        
 
 
+          
 ?>

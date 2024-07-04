@@ -65,6 +65,15 @@ class XoopsFormNumber extends XoopsFormElement
     public $_max = 100;
 
     /**
+     * Initial text
+     *
+     * @var string
+     * @access private
+     */
+    public $_unit = '';
+    
+
+    /**
      * Constructor
      *
      * @param string $caption   Caption
@@ -81,7 +90,7 @@ class XoopsFormNumber extends XoopsFormElement
         $this->_maxlength = (int)$maxlength;
         $this->setValue($value);
         
-        $this->setExtra('style="text-align : right;"');
+        //$this->setExtra('style="text-align : right;"');
         
     }
 
@@ -173,11 +182,33 @@ class XoopsFormNumber extends XoopsFormElement
      *
      * @param string $value
      */
-    public function setMinMax($min, $max)
+    public function setMinMax($min, $max, $unit = '')
     {
         $this->_min = $min;
         $this->_max = $max;
+        $this->_unit = $unit;        
     }
+
+    /**
+     * Set initial text value
+     *
+     * @param string $value
+     */
+    public function setUnit($unit)
+    {
+        $this->_unit = $unit;
+    }
+
+    /**
+     * Set initial text value
+     *
+     * @param string $value
+     */
+    public function getUnit()
+    {
+        return $this->_unit;
+    }
+
 ////////////////////////////////
     /**
      * Prepare HTML for output
@@ -185,13 +216,29 @@ class XoopsFormNumber extends XoopsFormElement
      * @return string HTML
      */
     public function render()
-    {
-        return "<input class='form-control' type='number' name='"
+    {   $libStyle = 'style=';
+        $styleDefault = 'text-align:right;';        
+        $extra = $this->getExtra();
+        $h = stripos($extra, $libStyle);
+        if($h===false){
+            $extra = "style='{$styleDefault}'";
+        }else{
+            $j = $h + strlen($libStyle);
+            $extra = substr($extra, 0, $j) . $styleDefault . substr($extra, $j+1); 
+        }
+        
+        
+        $ret =  "<input class='form-control' type='number' name='"
             . $this->getName() . "' title='" . $this->getTitle() . "' id='" . $this->getName()
             . "' size='" . $this->getSize() . "' maxlength='" . $this->getMaxlength()
             . "' value='" . $this->getValue() 
             . "' min='" . $this->getMin() 
             . "' max='" . $this->getMax() 
-            . "'" . $this->getExtra() . ' />';
+            . "'" . $extra . ' />';
+        if($this->_unit){
+            $ret .= '&nbsp;' . $this->_unit;
+        }
+        
+        return $ret;
     }
 }
