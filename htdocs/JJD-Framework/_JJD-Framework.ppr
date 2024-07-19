@@ -19,7 +19,7 @@ Extensions=*.*
 _JJD-Framework
 	+JJD-Framework
 		+class
-			+xoopsform
+			-xoopsform
 				-admintable
 					-doc
 						-images
@@ -753,6 +753,7 @@ _JJD-Framework
 				class\xoopsform\themeformjjd.php
 			class\About.php
 			class\index.html
+			class\permissions.php
 			class\tools.php
 		-css
 			css\index.html
@@ -1234,9 +1235,10 @@ _JJD-Framework
 9=class\xoopsform\formnumber.php
 10=language\french\admin.php
 11=language\french\common.php
+12=include\fw-functions.php
 [Selected Project Files]
 Main=
-Selected=include\globales-functions.php
+Selected=class\permissions.php
 [class\About.php]
 TopLine=110
 Caret=39,144
@@ -1250,8 +1252,8 @@ Caret=1,1
 TopLine=1
 Caret=1,1
 [include\globales-functions.php]
-TopLine=9
-Caret=46,20
+TopLine=98
+Caret=21,140
 [class\tools.php]
 TopLine=23
 Caret=15,23
@@ -1259,11 +1261,11 @@ Caret=15,23
 TopLine=1
 Caret=26,14
 [class\permissions.php]
-TopLine=28
+TopLine=4
 Caret=67,66
 [load.php]
 TopLine=19
-Caret=1,43
+Caret=45,62
 [class\xoopsform\formnumber.php]
 TopLine=188
 Caret=13,239
@@ -1273,3 +1275,6 @@ Caret=1,1
 [language\french\common.php]
 TopLine=1
 Caret=1,25
+[include\fw-functions.php]
+TopLine=1
+Caret=1,1
